@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f5f7fb;
+}
+
+
+/* ===================================================
+   GLOBAL DARK THEME
+=================================================== */
+
+body[data-theme="dark"]{
+
+    --bg:#0b1120;
+    --sidebar:#111827;
+    --card:#1e293b;
+    --card-hover:#263548;
+    --border:#334155;
+
+    --text:#f8fafc;
+    --text2:#cbd5e1;
+    --text3:#94a3b8;
+
+    --primary:#6366f1;
+    --primary-hover:#9a9a9a;
+
+    --success:#22c55e;
+    --warning:#f59e0b;
+    --danger:#ef4444;
+
+    background:var(--bg);
+    color:var(--text);
+}
+
+
+/* =======================================
+   BODY
+======================================= */
+
+body[data-theme="dark"]{
+    background:var(--bg);
+}
+
+
+/* =======================================
+   ALL PAGE BACKGROUND
+======================================= */
+
+body[data-theme="dark"] .dashboard,
+body[data-theme="dark"] .content,
+body[data-theme="dark"] .calendarPage,
+body[data-theme="dark"] .statsPage,
+body[data-theme="dark"] .settingsPage,
+body[data-theme="dark"] .allTasksPage,
+body[data-theme="dark"] .mainContent,
+body[data-theme="dark"] .allTasksContent,
+body[data-theme="dark"] .settingsContent{
+
+    background:var(--bg);
+}
+
+
+/* =======================================
+   SIDEBAR
+======================================= */
+
+body[data-theme="dark"] .sidebar{
+
+    background:var(--sidebar);
+    border-right:1px solid var(--border);
+
+}
+
+body[data-theme="dark"] .sidebar h1,
+body[data-theme="dark"] .sidebar h2,
+body[data-theme="dark"] .sidebar a,
+body[data-theme="dark"] .sidebar li{
+
+    color:var(--text);
+
+}
+
+body[data-theme="dark"] .sidebar a:hover,
+body[data-theme="dark"] .sidebar li:hover{
+
+    background:rgba(99,102,241,.18);
+    color:white;
+}
+
+
+/* =======================================
+   HEADINGS
+======================================= */
+
+body[data-theme="dark"] h1,
+body[data-theme="dark"] h2,
+body[data-theme="dark"] h3,
+body[data-theme="dark"] h4{
+
+    color:var(--text);
+    /* background:var(--bg); */
+
+
+}
+
+
+/* =======================================
+   PARAGRAPH
+======================================= */
+
+body[data-theme="dark"] p,
+body[data-theme="dark"] span,
+body[data-theme="dark"] label{
+
+    color:var(--text2);
+
+}
+
+
+/* =======================================
+   EVERY CARD
+======================================= */
+
+body[data-theme="dark"] .summaryBox,
+body[data-theme="dark"] .completed,
+body[data-theme="dark"] .pending,
+body[data-theme="dark"] .previous,
+body[data-theme="dark"] .calendarCard,
+body[data-theme="dark"] .dateTasksCard,
+body[data-theme="dark"] .settingsSection,
+body[data-theme="dark"] .statsCard,
+body[data-theme="dark"] .monthCard,
+body[data-theme="dark"] .monthNumberBox,
+body[data-theme="dark"] .monthlyRow,
+body[data-theme="dark"] .allTaskCard,
+body[data-theme="dark"] .noTasks{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+    color:var(--text);
+
+}
+
+
+/* =======================================
+   CARD TITLE
+======================================= */
+
+body[data-theme="dark"] .summaryBox span,
+body[data-theme="dark"] .statsCard span,
+body[data-theme="dark"] .taskMeta span{
+
+    color:var(--text2);
+
+}
+
+
+/* =======================================
+   BIG NUMBERS
+======================================= */
+
+body[data-theme="dark"] strong,
+body[data-theme="dark"] .summaryBox strong,
+body[data-theme="dark"] .statsCard h2,
+body[data-theme="dark"] .statsCard h3{
+
+    color:white;
+
+}
+
+
+/* =======================================
+   INPUT
+======================================= */
+
+body[data-theme="dark"] input,
+body[data-theme="dark"] textarea,
+body[data-theme="dark"] select{
+
+    background:#162033;
+
+    color:white;
+
+    border:1px solid var(--border);
+
+}
+
+
+body[data-theme="dark"] input::placeholder,
+body[data-theme="dark"] textarea::placeholder{
+
+    color:#94a3b8;
+
+}
+
+
+body[data-theme="dark"] input:focus,
+body[data-theme="dark"] textarea:focus,
+body[data-theme="dark"] select:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(99,102,241,.25);
+
+}
+
+
+/* =======================================
+   BUTTON
+======================================= */
+
+body[data-theme="dark"] button{
+
+    color:white;
+
+}
+
+
+/* PRIMARY */
+
+body[data-theme="dark"] .saveButton,
+body[data-theme="dark"] .addTaskButton{
+
+    background:var(--primary);
+
+}
+
+body[data-theme="dark"] .saveButton:hover,
+body[data-theme="dark"] .addTaskButton:hover{
+
+    background:var(--primary-hover);
+
+}
+
+
+/* DELETE */
+
+body[data-theme="dark"] .deleteTaskButton,
+body[data-theme="dark"] .clearButton{
+
+    background:#7f1d1d;
+
+    color:#fecaca;
+
+}
+
+body[data-theme="dark"] .deleteTaskButton:hover,
+body[data-theme="dark"] .clearButton:hover{
+
+    background:#dc2626;
+
+    color:white;
+
+}
+
+
+/* =======================================
+   STATUS
+======================================= */
+
+body[data-theme="dark"] .completedStatus{
+
+    background:rgba(34,197,94,.15);
+
+    color:#4ade80;
+
+}
+
+body[data-theme="dark"] .pendingStatus{
+
+    background:rgba(245,158,11,.15);
+
+    color:#fbbf24;
+
+}
+
+
+/* =======================================
+   TASK META
+======================================= */
+
+body[data-theme="dark"] .taskMeta span{
+
+    background:#162033;
+
+    color:#d1d5db;
+
+}
+
+
+/* =======================================
+   CALENDAR
+======================================= */
+
+body[data-theme="dark"] .calendarDay{
+
+    background:#1e293b;
+
+    color:white;
+
+    border:1px solid var(--border);
+
+}
+
+body[data-theme="dark"] .calendarDay:hover{
+
+    background:#2b3a52;
+
+}
+
+body[data-theme="dark"] .selectedDay{
+
+    /* background:var(--primary); */
+
+    color:white;
+
+}
+
+body[data-theme="dark"] .otherMonth{
+
+    color:#64748b;
+
+}
+
+
+/* =======================================
+   PROGRESS BAR
+======================================= */
+
+body[data-theme="dark"] .progressTrack,
+body[data-theme="dark"] .monthlyProgressTrack{
+
+    background:#334155;
+
+}
+
+body[data-theme="dark"] .progressFill,
+body[data-theme="dark"] .monthlyProgressFill{
+
+    background:linear-gradient(
+        90deg,
+        #6366f1,
+        #8b5cf6
+    );
+
+}
+
+
+/* =======================================
+   BORDER
+======================================= */
+
+body[data-theme="dark"] .settingsSectionHeader,
+body[data-theme="dark"] .dateTasksHeader,
+body[data-theme="dark"] .settingToggle{
+
+    border-color:var(--border);
+
+}
+
+
+/* =======================================
+   COMPLETED TEXT
+======================================= */
+
+body[data-theme="dark"] .completedText{
+
+    color:#94a3b8;
+
+}
+
+
+/* =======================================
+   NO TASKS
+======================================= */
+
+body[data-theme="dark"] .noTasks h3{
+
+    color:white;
+
+}
+
+body[data-theme="dark"] .noTasks p{
+
+    color:#cbd5e1;
+
+}

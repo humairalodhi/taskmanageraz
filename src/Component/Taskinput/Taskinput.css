@@ -1,0 +1,134 @@
+.addTask {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   TASK INPUT
+========================= */
+
+.taskInputBox {
+  flex: 1;
+}
+
+.taskInputBox input {
+  width: 100%;
+  height: 55px;
+
+  padding: 0 18px;
+
+  border: 1px solid #dfe2e8;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: #172033;
+  font-size: 16px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.taskInputBox input::placeholder {
+  color: #9ca3af;
+}
+
+.taskInputBox input:focus {
+  border-color: #5b5bd6;
+
+  box-shadow: 0 0 0 3px rgba(91, 91, 214, 0.1);
+}
+
+
+/* =========================
+   DATE INPUT
+========================= */
+
+.dateInputBox input {
+  width: 180px;
+  height: 55px;
+
+  padding: 0 14px;
+
+  border: 1px solid #dfe2e8;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: #172033;
+  font-size: 15px;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.dateInputBox input:focus {
+  border-color: #5b5bd6;
+
+  box-shadow: 0 0 0 3px rgba(91, 91, 214, 0.1);
+}
+
+
+/* =========================
+   ADD BUTTON
+========================= */
+
+.addTaskButton {
+  height: 55px;
+
+  padding: 0 25px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #5b5bd6;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.addTaskButton:hover {
+  background: #4747c7;
+
+  transform: translateY(-1px);
+}
+
+.addTaskButton:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+  .addTask {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dateInputBox input {
+    width: 100%;
+  }
+
+  .addTaskButton {
+    width: 100%;
+  }
+
+}

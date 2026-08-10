@@ -1,0 +1,348 @@
+.dashboard {
+  display: flex;
+
+  min-height: 100vh;
+
+  background: #f5f7fb;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.content {
+  margin-left: 250px;
+
+  padding: 30px;
+
+  width: calc(100% - 250px);
+}
+
+
+/* =========================
+   CURRENT MONTH
+========================= */
+
+.top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  padding: 25px 30px;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+.monthInfo h1 {
+  margin: 0 0 8px 0;
+
+  font-size: 48px;
+
+  font-weight: 700;
+
+  color: #172033;
+}
+
+
+.monthInfo p {
+  margin: 0;
+
+  font-size: 17px;
+
+  color: #6b7280;
+}
+
+
+.currentBadge {
+  display: inline-block;
+
+  margin-top: 12px;
+
+  padding: 6px 14px;
+
+  background: #eef0ff;
+
+  color: #5b5bd6;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   ADD TASK
+========================= */
+
+.addTask {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  width: 100%;
+
+  margin-bottom: 30px;
+}
+
+
+.addTask input {
+  height: 55px;
+
+  padding: 0 18px;
+
+  border: 1px solid #d7d9df;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  font-size: 16px;
+
+  outline: none;
+}
+
+
+.addTask input[type="text"] {
+  flex: 1;
+}
+
+
+.addTask input[type="date"] {
+  width: 180px;
+}
+
+
+.addTask input:focus {
+  border-color: #5b5bd6;
+
+  box-shadow: 0 0 0 3px rgba(91, 91, 214, 0.1);
+}
+
+
+.addTask button {
+  height: 55px;
+
+  padding: 0 25px;
+
+  background: #5b5bd6;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.addTask button:hover {
+  background: #4747c7;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   TASK CONTAINER
+========================= */
+
+.taskContainer {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 25px;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   COMPLETED / PENDING
+========================= */
+
+.completed,
+.pending {
+  background: #ffffff;
+
+  padding: 25px;
+
+  border-radius: 18px;
+
+  min-height: 300px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+.completed {
+  border-top: 5px solid #2fbd6b;
+}
+
+
+.pending {
+  border-top: 5px solid #ffb43b;
+}
+
+
+.completed h2,
+.pending h2 {
+  margin: 0 0 20px 0;
+
+  font-size: 28px;
+
+  color: #172033;
+}
+
+
+/* =========================
+   PREVIOUS MONTHS
+========================= */
+
+.previous {
+  margin-top: 30px;
+
+  background: #ffffff;
+
+  padding: 25px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+.previousTitle {
+  margin-bottom: 20px;
+}
+
+
+.previousTitle h2 {
+  margin: 0 0 5px 0;
+
+  font-size: 28px;
+
+  color: #172033;
+}
+
+
+.previousTitle p {
+  margin: 0;
+
+  color: #8b929d;
+
+  font-size: 15px;
+}
+
+
+.noPreviousMonths {
+  padding: 30px;
+
+  text-align: center;
+
+  background: #f8f9fb;
+
+  border-radius: 12px;
+
+  color: #9ca3af;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .content {
+    margin-left: 0;
+
+    width: 100%;
+
+    padding: 20px;
+  }
+
+
+  .top {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
+  }
+
+
+  .taskContainer {
+    grid-template-columns: 1fr;
+  }
+
+
+  .addTask {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .addTask input[type="date"] {
+    width: 100%;
+  }
+
+
+  .addTask button {
+    width: 100%;
+  }
+
+}
+
+
+.selectedDateInfo {
+  margin-bottom: 20px;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  border-left: 5px solid #5b5bd6;
+}
+
+
+.selectedDateInfo h2 {
+  margin: 0 0 5px 0;
+
+  font-size: 22px;
+
+  color: #172033;
+}
+
+
+.selectedDateInfo p {
+  margin: 0;
+
+  color: #8b929d;
+
+  font-size: 14px;
+}

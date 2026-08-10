@@ -1,0 +1,122 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+
+  background: white;
+
+  padding: 25px;
+
+  border-right: 1px solid #eee;
+
+  position: fixed;
+
+  left: 0;
+  top: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.sidebar h2 {
+  margin: 0 0 30px;
+
+  font-size: 24px;
+
+  color: #111827;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.sidebar ul {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+
+/* =========================
+   MENU ITEM
+========================= */
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+
+/* =========================
+   LINK
+========================= */
+
+.sidebar li a {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 10px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  color: #6b7280;
+
+  font-size: 15px;
+
+  transition: 0.2s ease;
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.sidebarIcon {
+  font-size: 18px;
+
+  min-width: 18px;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.sidebar li a:hover {
+  background: #eef2ff;
+
+  color: #5b5bd6;
+}
+
+
+/* =========================
+   ACTIVE LINK
+========================= */
+
+.sidebar li a.activeLink {
+  background: #eef2ff;
+
+  color: #5b5bd6;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   ACTIVE ICON
+========================= */
+
+.activeLink .sidebarIcon {
+  color: #5b5bd6;
+}

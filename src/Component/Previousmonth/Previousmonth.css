@@ -1,0 +1,119 @@
+.previousMonth {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f8f9fc;
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+}
+
+.previousMonthHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.previousMonthHeader h3 {
+  margin: 0 0 5px;
+  font-size: 22px;
+  color: #172033;
+}
+
+.previousMonthHeader p {
+  margin: 0;
+  color: #8b929d;
+  font-size: 14px;
+}
+
+.deleteMonthButton {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #ffe5e5;
+  color: #e53935;
+  cursor: pointer;
+}
+
+.deleteMonthButton:hover {
+  background: #ffd2d2;
+}
+
+.previousMonthStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.monthStat {
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.monthStat span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #8b929d;
+}
+
+.monthStat strong {
+  font-size: 22px;
+  color: #172033;
+}
+
+.previousTaskList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.previousTask {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: white;
+  border-radius: 10px;
+}
+
+.taskCompleted {
+  font-size: 20px;
+  color: #2fbd6b;
+}
+
+.taskPending {
+  font-size: 20px;
+  color: #ffb43b;
+}
+
+.previousTaskInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.previousTaskInfo span {
+  font-size: 15px;
+  color: #172033;
+}
+
+.previousTaskInfo small {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+
+  .previousMonthStats {
+    grid-template-columns: 1fr;
+  }
+
+  .previousMonthHeader {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+}

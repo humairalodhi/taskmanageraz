@@ -1,0 +1,165 @@
+.taskCalendar {
+  background: #ffffff;
+
+  padding: 25px;
+
+  margin-bottom: 30px;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.calendarHeader {
+  margin-bottom: 20px;
+}
+
+
+.calendarHeader h2 {
+  margin: 0 0 5px 0;
+
+  font-size: 24px;
+
+  color: #172033;
+}
+
+
+.calendarHeader p {
+  margin: 0;
+
+  color: #8b929d;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   WEEK
+========================= */
+
+.calendarWeek {
+  display: grid;
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
+  gap: 8px;
+
+  margin-bottom: 8px;
+}
+
+
+.weekDay {
+  padding: 10px;
+
+  text-align: center;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #8b929d;
+}
+
+
+/* =========================
+   DAYS
+========================= */
+
+.calendarDays {
+  display: grid;
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
+  gap: 8px;
+}
+
+
+.calendarDay {
+  position: relative;
+
+  min-height: 55px;
+
+  border: 1px solid #edf0f4;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #172033;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.calendarDay:hover:not(:disabled) {
+  background: #f4f5ff;
+
+  border-color: #5b5bd6;
+}
+
+
+.calendarDay:disabled {
+  background: transparent;
+
+  border-color: transparent;
+
+  cursor: default;
+}
+
+
+/* =========================
+   SELECTED DATE
+========================= */
+
+.selectedDay {
+  background: #5b5bd6 !important;
+
+  border-color: #5b5bd6 !important;
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   TASK INDICATOR
+========================= */
+
+.calendarDay.hasTasks {
+  font-weight: 600;
+}
+
+
+.calendarDay small {
+  position: absolute;
+
+  bottom: 7px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 5px;
+
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #5b5bd6;
+}
+
+
+.selectedDay small {
+  background: #ffffff;
+}

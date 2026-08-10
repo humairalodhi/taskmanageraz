@@ -1,0 +1,120 @@
+.taskItem {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 18px;
+
+  margin-bottom: 12px;
+
+  background: #f8f9fb;
+
+  border: 1px solid #eef0f3;
+
+  border-radius: 12px;
+
+  transition: 0.3s;
+}
+
+
+.taskItem:hover {
+  background: #f4f5f8;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.taskLeft {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 0;
+}
+
+
+.taskLeft > input {
+  width: 19px;
+  height: 19px;
+
+  flex-shrink: 0;
+
+  cursor: pointer;
+
+  accent-color: #2fbd6b;
+}
+
+
+/* =========================
+   TASK DETAILS
+========================= */
+
+.taskDetails {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  min-width: 0;
+}
+
+
+.taskText {
+  font-size: 16px;
+
+  color: #172033;
+
+  word-break: break-word;
+}
+
+
+.completedText {
+  color: #8a9099;
+
+  text-decoration: line-through;
+}
+
+
+/* =========================
+   DATE
+========================= */
+
+.taskDate {
+  font-size: 13px;
+
+  color: #8b929d;
+}
+
+
+/* =========================
+   DELETE
+========================= */
+
+.deleteIcon {
+  flex-shrink: 0;
+
+  margin-left: 15px;
+
+  color: #ef5350;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.deleteIcon:hover {
+  color: #d32f2f;
+
+  transform: scale(1.15);
+}

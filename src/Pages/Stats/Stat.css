@@ -1,0 +1,708 @@
+/* =========================================
+   STATS PAGE
+========================================= */
+
+.statsPage {
+  min-height: 100vh;
+  background: #f6f7fb;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.statsContent {
+  margin-left: 250px;
+  padding: 35px;
+  width: calc(100% - 250px);
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.statsHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.statsHeaderIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eeeeff;
+  color: #5b5bd6;
+
+  font-size: 22px;
+}
+
+.statsHeader h1 {
+  margin: 0;
+  font-size: 34px;
+  color: #111827;
+}
+
+.statsHeader p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+
+/* =========================================
+   STAT CARDS
+========================================= */
+
+.statsCards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+
+  margin-bottom: 25px;
+}
+
+.statsCard {
+  background: white;
+
+  border-radius: 14px;
+
+  padding: 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.05);
+
+  transition: 0.2s;
+}
+
+.statsCard:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   CARD ICON
+========================================= */
+
+.statsCardIcon {
+  width: 50px;
+  height: 50px;
+
+  min-width: 50px;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 21px;
+}
+
+
+/* TOTAL */
+
+.totalIcon {
+  background: #eeeeff;
+  color: #5b5bd6;
+}
+
+
+/* COMPLETED */
+
+.completedIcon {
+  background: #ecfdf5;
+  color: #16a34a;
+}
+
+
+/* PENDING */
+
+.pendingIcon {
+  background: #fff7ed;
+  color: #f59e0b;
+}
+
+
+/* RATE */
+
+.rateIcon {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.statsCardContent {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.statsCardContent span {
+  color: #6b7280;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+.statsCardContent strong {
+  color: #111827;
+
+  font-size: 28px;
+
+  line-height: 1.2;
+}
+
+.statsCardContent small {
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   SECTION COMMON
+========================================= */
+
+.currentMonthStats,
+.monthlyStats {
+  background: white;
+
+  border-radius: 14px;
+
+  padding: 25px;
+
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.05);
+
+  margin-bottom: 25px;
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.sectionHeader {
+  margin-bottom: 25px;
+}
+
+.sectionHeaderTitle {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+.sectionIcon {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 10px;
+
+  background: #eeeeff;
+
+  color: #5b5bd6;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+
+  font-size: 21px;
+
+  color: #111827;
+}
+
+.sectionHeader p {
+  margin: 5px 0 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   CURRENT MONTH NUMBERS
+========================================= */
+
+.currentMonthNumbers {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 28px;
+}
+
+.monthNumberBox {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  background: #f8f9fc;
+
+  padding: 18px;
+
+  border-radius: 11px;
+}
+
+.monthNumberBox .numberIcon {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 9px;
+
+  background: #eeeeff;
+
+  color: #5b5bd6;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.monthNumberBox div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.monthNumberBox span {
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+.monthNumberBox strong {
+  color: #111827;
+
+  font-size: 24px;
+}
+
+
+/* COMPLETED BOX */
+
+.monthNumberBox.completedBox {
+  background: #f0fdf4;
+}
+
+.completedBox .numberIcon {
+  background: #dcfce7;
+
+  color: #16a34a;
+}
+
+
+/* PENDING BOX */
+
+.monthNumberBox.pendingBox {
+  background: #fffbeb;
+}
+
+.pendingBox .numberIcon {
+  background: #fef3c7;
+
+  color: #d97706;
+}
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.statsProgress {
+  margin-top: 10px;
+}
+
+.progressTop {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 9px;
+}
+
+.progressTop span {
+  color: #374151;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+.progressTop strong {
+  color: #5b5bd6;
+
+  font-size: 14px;
+}
+
+.progressTrack {
+  width: 100%;
+
+  height: 10px;
+
+  background: #e5e7eb;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+
+  background: #5b5bd6;
+
+  border-radius: 20px;
+
+  transition: width 0.4s ease;
+}
+
+
+/* =========================================
+   MONTHLY LIST
+========================================= */
+
+.monthlyList {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+/* =========================================
+   MONTHLY ROW
+========================================= */
+
+.monthlyRow {
+  display: grid;
+
+  grid-template-columns:
+    1.5fr 2fr 100px 100px 70px;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 17px;
+
+  border: 1px solid #eef0f4;
+
+  border-radius: 10px;
+
+  transition: 0.2s;
+}
+
+.monthlyRow:hover {
+  background: #fafaff;
+
+  border-color: #ddddf8;
+}
+
+
+/* =========================================
+   MONTH NAME
+========================================= */
+
+.monthlyName {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+}
+
+.monthlyIcon {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 9px;
+
+  background: #eeeeff;
+
+  color: #5b5bd6;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.monthlyName > div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.monthlyName strong {
+  color: #111827;
+
+  font-size: 14px;
+}
+
+.monthlyName span {
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   MONTHLY PROGRESS
+========================================= */
+
+.monthlyProgress {
+  width: 100%;
+}
+
+.monthlyProgressTrack {
+  width: 100%;
+
+  height: 8px;
+
+  background: #e5e7eb;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.monthlyProgressFill {
+  height: 100%;
+
+  background: #5b5bd6;
+
+  border-radius: 20px;
+
+  transition: width 0.4s ease;
+}
+
+
+/* =========================================
+   COMPLETED / PENDING
+========================================= */
+
+.monthlyCompleted,
+.monthlyPending {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.monthlyCompleted span,
+.monthlyPending span {
+  font-size: 11px;
+
+  color: #9ca3af;
+}
+
+.monthlyCompleted strong {
+  color: #16a34a;
+
+  font-size: 15px;
+}
+
+.monthlyPending strong {
+  color: #d97706;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   PERCENTAGE
+========================================= */
+
+.monthlyPercentage {
+  text-align: right;
+}
+
+.monthlyPercentage strong {
+  color: #5b5bd6;
+
+  font-size: 16px;
+}
+
+
+/* =========================================
+   EMPTY STATS
+========================================= */
+
+.emptyStats {
+  text-align: center;
+
+  padding: 50px 20px;
+
+  color: #9ca3af;
+}
+
+.emptyStats svg {
+  font-size: 38px;
+
+  color: #c7c8ef;
+
+  margin-bottom: 10px;
+}
+
+.emptyStats h3 {
+  margin: 0 0 6px;
+
+  color: #374151;
+
+  font-size: 18px;
+}
+
+.emptyStats p {
+  margin: 0;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .statsCards {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .monthlyRow {
+    grid-template-columns:
+      1.5fr 2fr 80px 80px 60px;
+
+    gap: 12px;
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+  .statsContent {
+    margin-left: 0;
+
+    width: 100%;
+
+    padding: 25px;
+  }
+
+  .currentMonthNumbers {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .statsContent {
+    padding: 18px;
+  }
+
+  .statsHeader h1 {
+    font-size: 28px;
+  }
+
+  .statsCards {
+    grid-template-columns: 1fr;
+  }
+
+  .currentMonthNumbers {
+    grid-template-columns: 1fr;
+  }
+
+  .monthlyRow {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .monthlyPercentage {
+    text-align: left;
+  }
+
+  .monthlyProgress {
+    margin: 5px 0;
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .statsContent {
+    padding: 14px;
+  }
+
+  .currentMonthStats,
+  .monthlyStats {
+    padding: 18px;
+  }
+
+  .statsCard {
+    padding: 17px;
+  }
+
+  .statsCardContent strong {
+    font-size: 24px;
+  }
+
+}
