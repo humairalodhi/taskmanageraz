@@ -3,8 +3,7 @@ import { Navigate } from "react-router-dom";
 import { supabase } from "../../supabase";
 
 const ProtectedRoute = ({ children }) => {
-  const [session, setSession] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [session, setSession] = useState(undefined);
 
   useEffect(() => {
     const checkSession = async () => {
@@ -12,15 +11,19 @@ const ProtectedRoute = ({ children }) => {
         data: { session },
       } = await supabase.auth.getSession();
 
+      console.log("PROTECTED ROUTE SESSION:", session);
+
       setSession(session);
-      setLoading(false);
     };
 
     checkSession();
 
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
+    } = supabase.auth.onAuthStateChange((event, session) => {
+      console.log("AUTH EVENT:", event);
+      console.log("AUTH SESSION:", session);
+
       setSession(session);
     });
 
@@ -29,14 +32,17 @@ const ProtectedRoute = ({ children }) => {
     };
   }, []);
 
-  if (loading) {
-    return <div>Loading...</div>;
+  // Session check hone tak
+  if (session === undefined) {
+    return <div>Checking login...</div>;
   }
 
+  // Agar login nahi hai
   if (!session) {
     return <Navigate to="/login" replace />;
   }
 
+  // Agar login hai
   return children;
 };
 
