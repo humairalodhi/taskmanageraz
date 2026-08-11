@@ -15,8 +15,8 @@ const PreviousMonth = ({
 
   const completed =
     tasks.filter(
-      (task) => task.completed
-    );
+    (task) => task.completed
+  );
 
 
   // =========================
@@ -25,8 +25,8 @@ const PreviousMonth = ({
 
   const pending =
     tasks.filter(
-      (task) => !task.completed
-    );
+    (task) => !task.completed
+  );
 
 
   return (
@@ -136,22 +136,22 @@ const PreviousMonth = ({
           tasks.map(
             (task) => (
 
-              <div
+            <div
 
-                className="previousTask"
+              className="previousTask"
 
-                key={task.id}
+              key={task.id}
 
-              >
+            >
 
 
-                <span
+              <span
 
-                  className={
-                    task.completed
-                      ? "taskCompleted"
-                      : "taskPending"
-                  }
+                className={
+                  task.completed
+                    ? "taskCompleted"
+                    : "taskPending"
+                }
 
                 >
 
@@ -159,20 +159,20 @@ const PreviousMonth = ({
                     ? "✓"
                     : "○"}
 
+              </span>
+
+
+              <div className="previousTaskInfo">
+
+
+                <span>
+                  {task.text}
                 </span>
 
 
-                <div className="previousTaskInfo">
-
-
-                  <span>
-                    {task.text}
-                  </span>
-
-
-                  <small>
-                    {task.date}
-                  </small>
+                <small>
+                  {task.date}
+                </small>
 
 
                 </div>
