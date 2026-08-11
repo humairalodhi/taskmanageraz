@@ -3,20 +3,23 @@
 ========================================= */
 
 .settingsPage {
-  min-height: 100vh;
-  background: #f6f7fb;
+    min-height: 100vh;
+    width: 100%;
+    background: #f6f7fb;
+    box-sizing: border-box;
 }
 
 
 /* =========================================
-   MAIN CONTENT
+   MAIN CONTENT - DESKTOP
 ========================================= */
 
 .settingsContent {
-  margin-left: 250px;
-  padding: 35px;
-  width: calc(100% - 250px);
-  box-sizing: border-box;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    padding: 35px;
+    box-sizing: border-box;
 }
 
 
@@ -25,19 +28,19 @@
 ========================================= */
 
 .settingsHeader {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .settingsHeader h1 {
-  margin: 0;
-  font-size: 36px;
-  color: #111827;
+    margin: 0;
+    font-size: 36px;
+    color: #111827;
 }
 
 .settingsHeader p {
-  margin: 8px 0 0;
-  color: #6b7280;
-  font-size: 17px;
+    margin: 8px 0 0;
+    color: #6b7280;
+    font-size: 17px;
 }
 
 
@@ -46,11 +49,13 @@
 ========================================= */
 
 .settingsSection {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 14px;
-  margin-bottom: 25px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
 }
 
 
@@ -59,21 +64,21 @@
 ========================================= */
 
 .settingsSectionHeader {
-  padding-bottom: 20px;
-  margin-bottom: 22px;
-  border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 20px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .settingsSectionHeader h2 {
-  margin: 0;
-  font-size: 21px;
-  color: #111827;
+    margin: 0;
+    font-size: 21px;
+    color: #111827;
 }
 
 .settingsSectionHeader p {
-  margin: 6px 0 0;
-  color: #6b7280;
-  font-size: 14px;
+    margin: 6px 0 0;
+    color: #6b7280;
+    font-size: 14px;
 }
 
 
@@ -82,37 +87,37 @@
 ========================================= */
 
 .settingItem {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 20px;
 }
 
 .settingItem label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
 }
 
 .settingItem input {
-  width: 100%;
-  max-width: 500px;
-  padding: 13px 15px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 15px;
-  outline: none;
-  box-sizing: border-box;
-  transition: 0.2s;
+    width: 100%;
+    max-width: 500px;
+    padding: 13px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.2s;
 }
 
 .settingItem input:focus {
-  border-color: #5b5bd6;
-  box-shadow: 0 0 0 3px rgba(91, 91, 214, 0.1);
+    border-color: #5b5bd6;
+    box-shadow: 0 0 0 3px rgba(91, 91, 214, 0.1);
 }
 
 .settingItem input::placeholder {
-  color: #9ca3af;
+    color: #9ca3af;
 }
 
 
@@ -121,20 +126,20 @@
 ========================================= */
 
 .saveButton {
-  border: none;
-  background: #5b5bd6;
-  color: #ffffff;
-  padding: 12px 22px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.2s;
+    border: none;
+    background: #5b5bd6;
+    color: #ffffff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .saveButton:hover {
-  background: #4848c5;
-  transform: translateY(-1px);
+    background: #4848c5;
+    transform: translateY(-1px);
 }
 
 
@@ -143,30 +148,28 @@
 ========================================= */
 
 .settingToggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-
-  padding: 18px 0;
-
-  border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .settingToggle:last-of-type {
-  margin-bottom: 22px;
+    margin-bottom: 22px;
 }
 
 .settingToggle h3 {
-  margin: 0 0 5px;
-  color: #111827;
-  font-size: 16px;
+    margin: 0 0 5px;
+    color: #111827;
+    font-size: 16px;
 }
 
 .settingToggle p {
-  margin: 0;
-  color: #6b7280;
-  font-size: 13px;
+    margin: 0;
+    color: #6b7280;
+    font-size: 13px;
 }
 
 
@@ -175,50 +178,46 @@
 ========================================= */
 
 .switch {
-  position: relative;
-  width: 48px;
-  height: 26px;
-  flex-shrink: 0;
+    position: relative;
+    width: 48px;
+    height: 26px;
+    flex-shrink: 0;
 }
 
 .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 .slider {
-  position: absolute;
-  inset: 0;
-  background: #d1d5db;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s;
+    position: absolute;
+    inset: 0;
+    background: #d1d5db;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .slider::before {
-  content: "";
-  position: absolute;
-
-  width: 20px;
-  height: 20px;
-
-  left: 3px;
-  top: 3px;
-
-  background: #ffffff;
-  border-radius: 50%;
-
-  transition: 0.3s;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 3px;
+    top: 3px;
+    background: #ffffff;
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .switch input:checked + .slider {
-  background: #5b5bd6;
+    background: #5b5bd6;
 }
 
 .switch input:checked + .slider::before {
-  transform: translateX(22px);
+    transform: translateX(22px);
 }
 
 
@@ -227,74 +226,66 @@
 ========================================= */
 
 .appearanceInfo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-
-  padding: 18px;
-
-  background: #f8f8ff;
-  border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px;
+    background: #f8f8ff;
+    border-radius: 10px;
 }
 
 .appearanceInfo h3 {
-  margin: 0 0 5px;
-  color: #111827;
-  font-size: 16px;
+    margin: 0 0 5px;
+    color: #111827;
+    font-size: 16px;
 }
 
 .appearanceInfo p {
-  margin: 0;
-  color: #6b7280;
-  font-size: 13px;
+    margin: 0;
+    color: #6b7280;
+    font-size: 13px;
 }
 
 .comingSoon {
-  padding: 7px 12px;
-
-  background: #eeeeff;
-  color: #5b5bd6;
-
-  border-radius: 20px;
-
-  font-size: 12px;
-  font-weight: 600;
-
-  white-space: nowrap;
+    padding: 7px 12px;
+    background: #eeeeff;
+    color: #5b5bd6;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 
 /* =========================================
-   DATA / DANGER SECTION
+   DANGER SECTION
 ========================================= */
 
 .dangerSection {
-  border: 1px solid #fee2e2;
+    border: 1px solid #fee2e2;
 }
 
 .dangerItem {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-
-  padding: 18px;
-
-  background: #fff7f7;
-  border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 18px;
+    background: #fff7f7;
+    border-radius: 10px;
 }
 
 .dangerItem h3 {
-  margin: 0 0 5px;
-  color: #991b1b;
-  font-size: 16px;
+    margin: 0 0 5px;
+    color: #991b1b;
+    font-size: 16px;
 }
 
 .dangerItem p {
-  margin: 0;
-  color: #7f1d1d;
-  font-size: 13px;
+    margin: 0;
+    color: #7f1d1d;
+    font-size: 13px;
 }
 
 
@@ -303,84 +294,309 @@
 ========================================= */
 
 .clearButton {
-  border: none;
-
-  background: #dc2626;
-  color: #ffffff;
-
-  padding: 11px 18px;
-
-  border-radius: 8px;
-
-  font-size: 13px;
-  font-weight: 600;
-
-  cursor: pointer;
-
-  white-space: nowrap;
-
-  transition: 0.2s;
+    border: none;
+    background: #dc2626;
+    color: #ffffff;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.2s;
 }
 
 .clearButton:hover {
-  background: #b91c1c;
-  transform: translateY(-1px);
+    background: #b91c1c;
+    transform: translateY(-1px);
 }
 
 
-/* =========================================
+/* =====================================================
    TABLET
-========================================= */
+   Sidebar = 250px
+   ===================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
 
-  .settingsContent {
-    margin-left: 0;
-    width: 100%;
-    padding: 25px 20px;
-  }
+    .settingsContent {
+        margin-left: 150px;
+        width: calc(100% - 250px);
+        padding: 25px;
+    }
 
+    .settingsHeader h1 {
+        font-size: 32px;
+    }
+
+    .settingsHeader p {
+        font-size: 15px;
+    }
+
+    .settingsSection {
+        padding: 22px;
+    }
 }
 
 
-/* =========================================
+/* =====================================================
+   SMALL TABLET
+   Sidebar = 70px
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .settingsContent {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+        padding: 20px;
+    }
+
+    .settingsHeader {
+        margin-bottom: 22px;
+    }
+
+    .settingsHeader h1 {
+        font-size: 28px;
+    }
+
+    .settingsHeader p {
+        font-size: 14px;
+    }
+
+    .settingsSection {
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+    .settingsSectionHeader {
+        padding-bottom: 16px;
+        margin-bottom: 18px;
+    }
+
+    .settingsSectionHeader h2 {
+        font-size: 20px;
+    }
+
+    .settingItem input {
+        max-width: 100%;
+    }
+
+    .settingToggle {
+        gap: 15px;
+    }
+
+    .appearanceInfo,
+    .dangerItem {
+        gap: 15px;
+    }
+}
+
+
+/* =====================================================
    MOBILE
-========================================= */
+   Sidebar = 70px
+   ===================================================== */
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
 
-  .settingsContent {
-    padding: 20px 15px;
-  }
+    .settingsContent {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+        padding: 14px;
+    }
 
-  .settingsHeader h1 {
-    font-size: 30px;
-  }
+    .settingsHeader {
+        margin-bottom: 18px;
+    }
 
-  .settingsHeader p {
-    font-size: 15px;
-  }
+    .settingsHeader h1 {
+        font-size: 23px;
+    }
 
-  .settingsSection {
-    padding: 18px;
-  }
+    .settingsHeader p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
 
-  .settingToggle {
-    align-items: flex-start;
-  }
+    .settingsSection {
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
 
-  .appearanceInfo,
-  .dangerItem {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    .settingsSectionHeader {
+        padding-bottom: 12px;
+        margin-bottom: 15px;
+    }
 
-  .clearButton {
-    width: 100%;
-  }
+    .settingsSectionHeader h2 {
+        font-size: 17px;
+    }
 
-  .saveButton {
-    width: 100%;
-  }
+    .settingsSectionHeader p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
 
+    .settingItem {
+        gap: 7px;
+        margin-bottom: 15px;
+    }
+
+    .settingItem label {
+        font-size: 12px;
+    }
+
+    .settingItem input {
+        width: 100%;
+        max-width: 100%;
+        padding: 11px;
+        font-size: 12px;
+    }
+
+    .saveButton {
+        width: 100%;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .settingToggle {
+        align-items: center;
+        gap: 10px;
+        padding: 14px 0;
+    }
+
+    .settingToggle h3 {
+        font-size: 12px;
+        margin-bottom: 3px;
+    }
+
+    .settingToggle p {
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+    .switch {
+        width: 40px;
+        height: 22px;
+    }
+
+    .slider::before {
+        width: 16px;
+        height: 16px;
+        left: 3px;
+        top: 3px;
+    }
+
+    .switch input:checked + .slider::before {
+        transform: translateX(18px);
+    }
+
+    .appearanceInfo,
+    .dangerItem {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .appearanceInfo h3,
+    .dangerItem h3 {
+        font-size: 12px;
+    }
+
+    .appearanceInfo p,
+    .dangerItem p {
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+    .comingSoon {
+        font-size: 9px;
+        padding: 5px 8px;
+    }
+
+    .clearButton {
+        width: 100%;
+        padding: 9px;
+        font-size: 11px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+   Sidebar = 70px
+   ===================================================== */
+
+@media (max-width: 360px) {
+
+    .settingsContent {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+        padding: 10px;
+    }
+
+    .settingsHeader h1 {
+        font-size: 20px;
+    }
+
+    .settingsHeader p {
+        font-size: 10px;
+    }
+
+    .settingsSection {
+        padding: 11px;
+    }
+
+    .settingsSectionHeader h2 {
+        font-size: 15px;
+    }
+
+    .settingsSectionHeader p {
+        font-size: 9px;
+    }
+
+    .settingItem label {
+        font-size: 10px;
+    }
+
+    .settingItem input {
+        padding: 9px;
+        font-size: 10px;
+    }
+
+    .settingToggle h3 {
+        font-size: 10px;
+    }
+
+    .settingToggle p {
+        font-size: 8px;
+    }
+
+    .switch {
+        width: 36px;
+        height: 20px;
+    }
+
+    .slider::before {
+        width: 14px;
+        height: 14px;
+        left: 3px;
+        top: 3px;
+    }
+
+    .switch input:checked + .slider::before {
+        transform: translateX(16px);
+    }
+
+    .appearanceInfo h3,
+    .dangerItem h3 {
+        font-size: 10px;
+    }
+
+    .appearanceInfo p,
+    .dangerItem p {
+        font-size: 8px;
+    }
 }

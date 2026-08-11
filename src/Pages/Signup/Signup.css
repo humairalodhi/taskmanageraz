@@ -1,11 +1,22 @@
+/* =========================
+   SIGNUP PAGE
+========================= */
+
 .signupPage {
   min-height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #f5f7fb;
   padding: 20px;
+  box-sizing: border-box;
 }
+
+
+/* =========================
+   SIGNUP CARD
+========================= */
 
 .signupCard {
   width: 100%;
@@ -14,7 +25,13 @@
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
 }
+
+
+/* =========================
+   HEADER
+========================= */
 
 .signupHeader {
   text-align: center;
@@ -24,18 +41,31 @@
 .signupHeader h1 {
   margin: 0 0 8px;
   font-size: 30px;
+  line-height: 1.2;
 }
 
 .signupHeader p {
   margin: 0;
   color: #777;
+  font-size: 15px;
+  line-height: 1.5;
 }
+
+
+/* =========================
+   FORM
+========================= */
 
 .signupForm {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
+
+
+/* =========================
+   FORM GROUP
+========================= */
 
 .formGroup {
   display: flex;
@@ -45,6 +75,7 @@
 
 .formGroup label {
   font-weight: 600;
+  font-size: 14px;
 }
 
 .formGroup input {
@@ -55,13 +86,20 @@
   border-radius: 8px;
   font-size: 15px;
   outline: none;
+  transition: border-color 0.2s ease;
 }
 
 .formGroup input:focus {
   border-color: #4f46e5;
 }
 
+
+/* =========================
+   SIGNUP BUTTON
+========================= */
+
 .signupButton {
+  width: 100%;
   border: none;
   padding: 14px;
   border-radius: 8px;
@@ -70,6 +108,11 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.signupButton:hover {
+  background: #4338ca;
 }
 
 .signupButton:disabled {
@@ -77,16 +120,149 @@
   cursor: not-allowed;
 }
 
+
+/* =========================
+   LOGIN LINK
+========================= */
+
 .loginLink {
   margin-top: 25px;
   text-align: center;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 6px;
+  flex-wrap: wrap;
+  font-size: 14px;
 }
 
 .loginLink a {
   color: #4f46e5;
   font-weight: 600;
   text-decoration: none;
+}
+
+.loginLink a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   TABLET
+   768px and below
+========================= */
+
+@media (max-width: 768px) {
+
+  .signupPage {
+    padding: 20px;
+  }
+
+  .signupCard {
+    max-width: 400px;
+    padding: 32px;
+  }
+
+  .signupHeader h1 {
+    font-size: 27px;
+  }
+
+  .signupHeader {
+    margin-bottom: 25px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+   480px and below
+========================= */
+
+@media (max-width: 480px) {
+
+  .signupPage {
+    padding: 15px;
+    align-items: center;
+  }
+
+  .signupCard {
+    width: 100%;
+    padding: 25px 20px;
+    border-radius: 12px;
+  }
+
+  .signupHeader {
+    margin-bottom: 22px;
+  }
+
+  .signupHeader h1 {
+    font-size: 24px;
+  }
+
+  .signupHeader p {
+    font-size: 14px;
+  }
+
+  .signupForm {
+    gap: 15px;
+  }
+
+  .formGroup {
+    gap: 6px;
+  }
+
+  .formGroup label {
+    font-size: 13px;
+  }
+
+  .formGroup input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .signupButton {
+    padding: 13px;
+    font-size: 15px;
+  }
+
+  .loginLink {
+    margin-top: 20px;
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+   360px and below
+========================= */
+
+@media (max-width: 360px) {
+
+  .signupPage {
+    padding: 10px;
+  }
+
+  .signupCard {
+    padding: 22px 16px;
+  }
+
+  .signupHeader h1 {
+    font-size: 22px;
+  }
+
+  .signupHeader p {
+    font-size: 13px;
+  }
+
+  .formGroup input {
+    padding: 11px;
+  }
+
+  .signupButton {
+    padding: 12px;
+  }
+
 }

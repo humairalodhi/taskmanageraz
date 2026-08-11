@@ -1,18 +1,88 @@
-.header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:30px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+  gap: 15px;
 }
 
-.profile{
-width:45px;
-height:45px;
-background:#5b5bd6;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-font-weight:bold;
+.header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.profile {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  background: #5b5bd6;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 25px;
+    gap: 10px;
+  }
+
+  .header h2 {
+    font-size: 20px;
+  }
+
+  .profile {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .header {
+    margin-bottom: 20px;
+  }
+
+  .header h2 {
+    font-size: 17px;
+  }
+
+  .profile {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+  .header h2 {
+    font-size: 15px;
+  }
+
+  .profile {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    font-size: 12px;
+  }
 }

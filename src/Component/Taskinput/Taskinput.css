@@ -5,6 +5,8 @@
 
   width: 100%;
   margin-bottom: 30px;
+
+  box-sizing: border-box;
 }
 
 
@@ -14,7 +16,9 @@
 
 .taskInputBox {
   flex: 1;
+  min-width: 0;
 }
+
 
 .taskInputBox input {
   width: 100%;
@@ -33,11 +37,15 @@
   outline: none;
 
   transition: 0.3s;
+
+  box-sizing: border-box;
 }
+
 
 .taskInputBox input::placeholder {
   color: #9ca3af;
 }
+
 
 .taskInputBox input:focus {
   border-color: #5b5bd6;
@@ -49,6 +57,11 @@
 /* =========================
    DATE INPUT
 ========================= */
+
+.dateInputBox {
+  flex-shrink: 0;
+}
+
 
 .dateInputBox input {
   width: 180px;
@@ -69,7 +82,10 @@
   cursor: pointer;
 
   transition: 0.3s;
+
+  box-sizing: border-box;
 }
+
 
 .dateInputBox input:focus {
   border-color: #5b5bd6;
@@ -99,7 +115,10 @@
   cursor: pointer;
 
   transition: 0.3s;
+
+  flex-shrink: 0;
 }
+
 
 .addTaskButton:hover {
   background: #4747c7;
@@ -107,28 +126,115 @@
   transform: translateY(-1px);
 }
 
+
 .addTaskButton:active {
   transform: translateY(0);
 }
 
 
 /* =========================
-   RESPONSIVE
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .addTask {
+    gap: 10px;
+  }
+
+  .dateInputBox input {
+    width: 160px;
+  }
+
+  .addTaskButton {
+    padding: 0 20px;
+
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
 ========================= */
 
 @media (max-width: 700px) {
 
   .addTask {
     flex-direction: column;
+
     align-items: stretch;
+
+    gap: 10px;
   }
+
+
+  .taskInputBox {
+    width: 100%;
+  }
+
+
+  .taskInputBox input {
+    width: 100%;
+  }
+
+
+  .dateInputBox {
+    width: 100%;
+  }
+
 
   .dateInputBox input {
     width: 100%;
   }
 
+
   .addTaskButton {
     width: 100%;
+
+    padding: 0 20px;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .addTask {
+    gap: 8px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .taskInputBox input,
+  .dateInputBox input,
+  .addTaskButton {
+    height: 50px;
+  }
+
+
+  .taskInputBox input {
+    padding: 0 14px;
+
+    font-size: 14px;
+  }
+
+
+  .dateInputBox input {
+    padding: 0 12px;
+
+    font-size: 14px;
+  }
+
+
+  .addTaskButton {
+    font-size: 14px;
   }
 
 }

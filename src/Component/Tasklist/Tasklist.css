@@ -1,36 +1,28 @@
 .completed,
 .pending {
   background: #ffffff;
-
   padding: 25px;
-
   border-radius: 18px;
-
   min-height: 300px;
-
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  width: 100%;
 }
-
 
 .completed {
   border-top: 5px solid #2fbd6b;
 }
 
-
 .pending {
   border-top: 5px solid #ffb43b;
 }
 
-
 .completed h2,
 .pending h2 {
   margin: 0 0 25px 0;
-
   font-size: 28px;
-
   color: #172033;
 }
-
 
 /* =========================
    DAILY TASKS
@@ -38,12 +30,9 @@
 
 .dailyTasks {
   display: flex;
-
   flex-direction: column;
-
   gap: 22px;
 }
-
 
 /* =========================
    DAY GROUP
@@ -53,29 +42,24 @@
   width: 100%;
 }
 
-
 /* =========================
    DAY TITLE
 ========================= */
 
 .dayTitle {
   padding: 10px 14px;
-
   margin-bottom: 10px;
 
   background: #f4f5ff;
-
   border-left: 4px solid #5b5bd6;
-
   border-radius: 8px;
 
   color: #35358f;
-
   font-size: 16px;
-
   font-weight: 600;
-}
 
+  box-sizing: border-box;
+}
 
 /* =========================
    TASKS OF THAT DAY
@@ -83,12 +67,9 @@
 
 .dayTasks {
   display: flex;
-
   flex-direction: column;
-
   gap: 8px;
 }
-
 
 /* =========================
    EMPTY
@@ -96,10 +77,95 @@
 
 .emptyTasks {
   padding: 35px 10px;
-
   text-align: center;
 
   color: #9ca3af;
-
   font-size: 15px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .completed,
+  .pending {
+    padding: 20px;
+    min-height: 250px;
+  }
+
+  .completed h2,
+  .pending h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .dailyTasks {
+    gap: 18px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .completed,
+  .pending {
+    padding: 16px;
+    border-radius: 14px;
+    min-height: 200px;
+  }
+
+  .completed,
+  .pending {
+    border-top-width: 4px;
+  }
+
+  .completed h2,
+  .pending h2 {
+    font-size: 21px;
+    margin-bottom: 16px;
+  }
+
+  .dailyTasks {
+    gap: 15px;
+  }
+
+  .dayTitle {
+    padding: 9px 11px;
+    font-size: 14px;
+  }
+
+  .emptyTasks {
+    padding: 25px 8px;
+    font-size: 14px;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .completed,
+  .pending {
+    padding: 13px;
+  }
+
+  .completed h2,
+  .pending h2 {
+    font-size: 19px;
+  }
+
+  .dayTitle {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
 }

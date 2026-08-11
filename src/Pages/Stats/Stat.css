@@ -612,97 +612,395 @@
 }
 
 
+
 /* =========================================
-   RESPONSIVE
+   RESPONSIVE - SIDEBAR LEFT
+========================================= */
+
+
+/* =========================================
+   TABLET
+   Sidebar = 250px
 ========================================= */
 
 @media (max-width: 1100px) {
 
-  .statsCards {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
+    .statsContent {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+        padding: 25px;
+    }
 
-  .monthlyRow {
-    grid-template-columns:
-      1.5fr 2fr 80px 80px 60px;
+    .statsCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-    gap: 12px;
-  }
-
+    .monthlyRow {
+        grid-template-columns: 1.5fr 2fr 80px 80px 60px;
+        gap: 12px;
+    }
 }
 
 
-@media (max-width: 900px) {
+/* =========================================
+   SMALL TABLET
+   Sidebar = 70px
+========================================= */
 
-  .statsContent {
-    margin-left: 0;
+@media (max-width: 768px) {
 
-    width: 100%;
+    .statsContent {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+        padding: 20px;
+    }
 
-    padding: 25px;
-  }
+    .statsHeader {
+        gap: 10px;
+        margin-bottom: 22px;
+    }
 
-  .currentMonthNumbers {
-    grid-template-columns:
-      repeat(3, 1fr);
-  }
+    .statsHeaderIcon {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        font-size: 19px;
+    }
 
+    .statsHeader h1 {
+        font-size: 27px;
+    }
+
+    .statsHeader p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .statsCards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .statsCard {
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .statsCardIcon {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+        font-size: 19px;
+    }
+
+    .statsCardContent span {
+        font-size: 12px;
+    }
+
+    .statsCardContent strong {
+        font-size: 24px;
+    }
+
+    .statsCardContent small {
+        font-size: 10px;
+    }
+
+    .currentMonthStats,
+    .monthlyStats {
+        padding: 20px;
+    }
+
+    .currentMonthNumbers {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .monthNumberBox {
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .monthNumberBox .numberIcon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+    }
+
+    .monthNumberBox span {
+        font-size: 11px;
+    }
+
+    .monthNumberBox strong {
+        font-size: 21px;
+    }
+
+    .monthlyRow {
+        grid-template-columns: 1.5fr 2fr 70px 70px 55px;
+        gap: 10px;
+        padding: 14px;
+    }
 }
 
 
-@media (max-width: 700px) {
+/* =========================================
+   MOBILE
+   Sidebar = 70px
+========================================= */
 
-  .statsContent {
-    padding: 18px;
-  }
+@media (max-width: 480px) {
 
-  .statsHeader h1 {
-    font-size: 28px;
-  }
+    .statsContent {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+        padding: 12px;
+    }
 
-  .statsCards {
-    grid-template-columns: 1fr;
-  }
+    .statsHeader {
+        gap: 8px;
+        margin-bottom: 18px;
+    }
 
-  .currentMonthNumbers {
-    grid-template-columns: 1fr;
-  }
+    .statsHeaderIcon {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        border-radius: 9px;
+        font-size: 17px;
+    }
 
-  .monthlyRow {
-    grid-template-columns: 1fr;
+    .statsHeader h1 {
+        font-size: 21px;
+    }
 
-    gap: 15px;
-  }
+    .statsHeader p {
+        font-size: 10px;
+        line-height: 1.4;
+    }
 
-  .monthlyPercentage {
-    text-align: left;
-  }
+    /* Stats cards */
+    .statsCards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
 
-  .monthlyProgress {
-    margin: 5px 0;
-  }
+    .statsCard {
+        padding: 14px;
+        border-radius: 11px;
+        gap: 10px;
+    }
 
+    .statsCardIcon {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        border-radius: 9px;
+        font-size: 16px;
+    }
+
+    .statsCardContent {
+        gap: 2px;
+    }
+
+    .statsCardContent span {
+        font-size: 10px;
+    }
+
+    .statsCardContent strong {
+        font-size: 20px;
+    }
+
+    .statsCardContent small {
+        font-size: 8px;
+    }
+
+    /* Sections */
+    .currentMonthStats,
+    .monthlyStats {
+        padding: 14px;
+        border-radius: 11px;
+        margin-bottom: 15px;
+    }
+
+    .sectionHeader {
+        margin-bottom: 17px;
+    }
+
+    .sectionHeaderTitle {
+        gap: 8px;
+    }
+
+    .sectionIcon {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        font-size: 15px;
+    }
+
+    .sectionHeader h2 {
+        font-size: 17px;
+    }
+
+    .sectionHeader p {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    /* Current month */
+    .currentMonthNumbers {
+        grid-template-columns: 1fr;
+        gap: 9px;
+        margin-bottom: 20px;
+    }
+
+    .monthNumberBox {
+        padding: 12px;
+        border-radius: 9px;
+    }
+
+    .monthNumberBox .numberIcon {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+    }
+
+    .monthNumberBox span {
+        font-size: 10px;
+    }
+
+    .monthNumberBox strong {
+        font-size: 20px;
+    }
+
+    /* Progress */
+    .progressTop span,
+    .progressTop strong {
+        font-size: 11px;
+    }
+
+    .progressTrack {
+        height: 8px;
+    }
+
+    /* Monthly list */
+    .monthlyList {
+        gap: 9px;
+    }
+
+    .monthlyRow {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .monthlyName {
+        gap: 8px;
+    }
+
+    .monthlyIcon {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+    }
+
+    .monthlyName strong {
+        font-size: 12px;
+    }
+
+    .monthlyName span {
+        font-size: 9px;
+    }
+
+    .monthlyProgress {
+        margin: 3px 0;
+    }
+
+    .monthlyProgressTrack {
+        height: 7px;
+    }
+
+    .monthlyCompleted,
+    .monthlyPending {
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .monthlyCompleted span,
+    .monthlyPending span {
+        font-size: 9px;
+    }
+
+    .monthlyCompleted strong,
+    .monthlyPending strong {
+        font-size: 13px;
+    }
+
+    .monthlyPercentage {
+        text-align: left;
+    }
+
+    .monthlyPercentage strong {
+        font-size: 14px;
+    }
 }
 
 
-@media (max-width: 450px) {
+/* =========================================
+   VERY SMALL MOBILE
+   Sidebar = 70px
+========================================= */
 
-  .statsContent {
-    padding: 14px;
-  }
+@media (max-width: 360px) {
 
-  .currentMonthStats,
-  .monthlyStats {
-    padding: 18px;
-  }
+    .statsContent {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+        padding: 9px;
+    }
 
-  .statsCard {
-    padding: 17px;
-  }
+    .statsHeader h1 {
+        font-size: 19px;
+    }
 
-  .statsCardContent strong {
-    font-size: 24px;
-  }
+    .statsHeader p {
+        font-size: 9px;
+    }
 
+    .statsHeaderIcon {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+    }
+
+    .statsCard {
+        padding: 11px;
+    }
+
+    .statsCardIcon {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+    }
+
+    .statsCardContent strong {
+        font-size: 18px;
+    }
+
+    .currentMonthStats,
+    .monthlyStats {
+        padding: 11px;
+    }
+
+    .sectionHeader h2 {
+        font-size: 15px;
+    }
+
+    .monthNumberBox {
+        padding: 10px;
+    }
+
+    .monthlyRow {
+        padding: 10px;
+    }
 }

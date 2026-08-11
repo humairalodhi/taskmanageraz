@@ -9,6 +9,10 @@
 
   box-shadow:
     0 5px 20px rgba(0, 0, 0, 0.05);
+
+  box-sizing: border-box;
+
+  width: 100%;
 }
 
 
@@ -46,8 +50,7 @@
 .calendarWeek {
   display: grid;
 
-  grid-template-columns:
-    repeat(7, 1fr);
+  grid-template-columns: repeat(7, 1fr);
 
   gap: 8px;
 
@@ -75,8 +78,7 @@
 .calendarDays {
   display: grid;
 
-  grid-template-columns:
-    repeat(7, 1fr);
+  grid-template-columns: repeat(7, 1fr);
 
   gap: 8px;
 }
@@ -100,6 +102,8 @@
   cursor: pointer;
 
   transition: 0.2s;
+
+  box-sizing: border-box;
 }
 
 
@@ -162,4 +166,143 @@
 
 .selectedDay small {
   background: #ffffff;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .taskCalendar {
+    padding: 20px;
+
+    border-radius: 15px;
+  }
+
+  .calendarHeader h2 {
+    font-size: 22px;
+  }
+
+  .calendarWeek,
+  .calendarDays {
+    gap: 6px;
+  }
+
+  .weekDay {
+    padding: 8px 5px;
+
+    font-size: 12px;
+  }
+
+  .calendarDay {
+    min-height: 50px;
+
+    font-size: 14px;
+
+    border-radius: 8px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .taskCalendar {
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+  }
+
+  .calendarHeader {
+    margin-bottom: 15px;
+  }
+
+  .calendarHeader h2 {
+    font-size: 20px;
+  }
+
+  .calendarHeader p {
+    font-size: 13px;
+  }
+
+  .calendarWeek,
+  .calendarDays {
+    gap: 4px;
+  }
+
+  .weekDay {
+    padding: 7px 2px;
+
+    font-size: 11px;
+  }
+
+  .calendarDay {
+    min-height: 43px;
+
+    font-size: 13px;
+
+    border-radius: 7px;
+  }
+
+  .calendarDay small {
+    bottom: 5px;
+
+    width: 4px;
+
+    height: 4px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .taskCalendar {
+    padding: 10px;
+  }
+
+  .calendarHeader h2 {
+    font-size: 18px;
+  }
+
+  .calendarHeader p {
+    font-size: 12px;
+  }
+
+  .calendarWeek,
+  .calendarDays {
+    gap: 3px;
+  }
+
+  .weekDay {
+    padding: 6px 1px;
+
+    font-size: 10px;
+  }
+
+  .calendarDay {
+    min-height: 38px;
+
+    font-size: 12px;
+
+    border-radius: 6px;
+  }
+
+  .calendarDay small {
+    bottom: 4px;
+
+    width: 4px;
+
+    height: 4px;
+  }
 }

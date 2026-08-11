@@ -24,7 +24,6 @@ function App() {
   return (
     <ThemeProvider>
 
-      {/* Toast Notifications */}
       <Toaster
         position="top-right"
         reverseOrder={false}
@@ -57,10 +56,10 @@ function App() {
       <BrowserRouter>
         <Routes>
 
-          {/* Login - website open hote hi */}
+          {/* Website open → Login */}
           <Route
             path="/"
-            element={<Login />}
+            element={<Navigate to="/login" replace />}
           />
 
           {/* Login */}
@@ -77,42 +76,67 @@ function App() {
 
           {/* Dashboard */}
           <Route
-  path="/dashboard"
-  element={
-    <ProtectedRoute>
-      <Dashboard />
-    </ProtectedRoute>
-  }
-/>
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+
+           <Route
+            path="/dash"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
 
           {/* All Tasks */}
           <Route
             path="/all-tasks"
-            element={<AllTask />}
+            element={
+              <ProtectedRoute>
+                <AllTask />
+              </ProtectedRoute>
+            }
           />
 
           {/* Calendar */}
           <Route
             path="/calendar"
-            element={<Calender />}
+            element={
+              <ProtectedRoute>
+                <Calender />
+              </ProtectedRoute>
+            }
           />
 
           {/* Statistics */}
           <Route
             path="/stats"
-            element={<Stats />}
+            element={
+              <ProtectedRoute>
+                <Stats />
+              </ProtectedRoute>
+            }
           />
 
           {/* Settings */}
           <Route
             path="/settings"
-            element={<Setting />}
+            element={
+              <ProtectedRoute>
+                <Setting />
+              </ProtectedRoute>
+            }
           />
 
           {/* Unknown URL → Login */}
           <Route
             path="*"
-            element={<Navigate to="/" replace />}
+            element={<Navigate to="/login" replace />}
           />
 
         </Routes>

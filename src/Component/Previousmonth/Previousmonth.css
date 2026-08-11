@@ -4,13 +4,20 @@
   background: #f8f9fc;
   border: 1px solid #e5e7eb;
   border-radius: 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
+
+/* =========================
+   HEADER
+========================= */
 
 .previousMonthHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  gap: 15px;
 }
 
 .previousMonthHeader h3 {
@@ -25,6 +32,10 @@
   font-size: 14px;
 }
 
+/* =========================
+   DELETE BUTTON
+========================= */
+
 .deleteMonthButton {
   padding: 8px 15px;
   border: none;
@@ -32,11 +43,17 @@
   background: #ffe5e5;
   color: #e53935;
   cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s ease;
 }
 
 .deleteMonthButton:hover {
   background: #ffd2d2;
 }
+
+/* =========================
+   MONTH STATS
+========================= */
 
 .previousMonthStats {
   display: grid;
@@ -50,6 +67,7 @@
   background: white;
   border-radius: 10px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .monthStat span {
@@ -64,10 +82,15 @@
   color: #172033;
 }
 
+/* =========================
+   TASK LIST
+========================= */
+
 .previousTaskList {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 }
 
 .previousTask {
@@ -77,27 +100,35 @@
   padding: 12px;
   background: white;
   border-radius: 10px;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .taskCompleted {
   font-size: 20px;
   color: #2fbd6b;
+  flex-shrink: 0;
 }
 
 .taskPending {
   font-size: 20px;
   color: #ffb43b;
+  flex-shrink: 0;
 }
 
 .previousTaskInfo {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  min-width: 0;
 }
 
 .previousTaskInfo span {
   font-size: 15px;
   color: #172033;
+
+  /* Long task text ko break karega */
+  overflow-wrap: anywhere;
 }
 
 .previousTaskInfo small {
@@ -105,15 +136,162 @@
   font-size: 12px;
 }
 
-@media (max-width: 600px) {
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .previousMonth {
+    padding: 18px;
+  }
+
+  .previousMonthHeader h3 {
+    font-size: 20px;
+  }
+
+  .previousMonthHeader p {
+    font-size: 13px;
+  }
 
   .previousMonthStats {
-    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .monthStat {
+    padding: 13px;
+  }
+
+  .monthStat strong {
+    font-size: 20px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .previousMonth {
+    padding: 15px;
+    border-radius: 12px;
   }
 
   .previousMonthHeader {
     align-items: flex-start;
-    gap: 15px;
+    gap: 12px;
   }
 
+  .previousMonthHeader h3 {
+    font-size: 18px;
+  }
+
+  .previousMonthHeader p {
+    font-size: 12px;
+  }
+
+  .deleteMonthButton {
+    padding: 7px 11px;
+    font-size: 12px;
+  }
+
+  .previousMonthStats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .monthStat {
+    padding: 12px;
+  }
+
+  .monthStat span {
+    font-size: 12px;
+  }
+
+  .monthStat strong {
+    font-size: 19px;
+  }
+
+  .previousTask {
+    padding: 10px;
+    gap: 9px;
+  }
+
+  .taskCompleted,
+  .taskPending {
+    font-size: 18px;
+  }
+
+  .previousTaskInfo span {
+    font-size: 14px;
+  }
+
+  .previousTaskInfo small {
+    font-size: 11px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .previousMonth {
+    padding: 12px;
+  }
+
+  .previousMonthHeader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .deleteMonthButton {
+    width: 100%;
+    padding: 9px;
+  }
+
+  .previousMonthHeader h3 {
+    font-size: 17px;
+  }
+
+  .previousTask {
+    padding: 9px;
+  }
+
+  .previousTaskInfo span {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 320px) {
+
+  .previousMonth {
+    padding: 10px;
+  }
+
+  .previousMonthHeader h3 {
+    font-size: 16px;
+  }
+
+  .previousMonthHeader p {
+    font-size: 11px;
+  }
+
+  .monthStat strong {
+    font-size: 18px;
+  }
+
+  .previousTaskInfo span {
+    font-size: 12px;
+  }
+
+  .previousTaskInfo small {
+    font-size: 10px;
+  }
 }

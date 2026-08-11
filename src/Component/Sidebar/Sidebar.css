@@ -9,11 +9,12 @@
   border-right: 1px solid #eee;
 
   position: fixed;
-
   left: 0;
   top: 0;
 
   box-sizing: border-box;
+
+  z-index: 1000;
 }
 
 
@@ -27,6 +28,8 @@
   font-size: 24px;
 
   color: #111827;
+
+  white-space: nowrap;
 }
 
 
@@ -119,4 +122,91 @@
 
 .activeLink .sidebarIcon {
   color: #5b5bd6;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .sidebar {
+    width: 210px;
+    padding: 20px;
+  }
+
+  .sidebar h2 {
+    font-size: 21px;
+    margin-bottom: 25px;
+  }
+
+  .sidebar li a {
+    padding: 12px 9px;
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .sidebarIcon {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .sidebar {
+    width: 70px;
+    padding: 20px 10px;
+  }
+
+  /* Hide title */
+
+  .sidebar h2 {
+    display: none;
+  }
+
+  /* Center icons */
+
+  .sidebar li a {
+    justify-content: center;
+    padding: 13px 8px;
+    gap: 0;
+  }
+
+  /* Hide text */
+
+  .sidebar li a span {
+    display: none;
+  }
+
+  .sidebarIcon {
+    font-size: 20px;
+    min-width: auto;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .sidebar {
+    width: 60px;
+    padding: 15px 8px;
+  }
+
+  .sidebar li a {
+    padding: 12px 6px;
+  }
+
+  .sidebarIcon {
+    font-size: 18px;
+  }
 }

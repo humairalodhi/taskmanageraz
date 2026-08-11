@@ -1,364 +1,642 @@
-/* ===========================
+/* =====================================================
    ALL TASK PAGE
-=========================== */
+===================================================== */
 
 .allTasksPage {
-  display: flex;
-  min-height: 100vh;
-  background: #f5f7fb;
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background: #f5f7fb;
 }
 
-/* ===========================
+/* =====================================================
    MAIN CONTENT
-=========================== */
+===================================================== */
 
 .allTasksContent {
-  flex: 1;
-  margin-left: 280px;      /* Same width as Sidebar */
-  padding: 30px;
-  min-height: 100vh;
-  background: #f5f7fb;
-  overflow-y: auto;
-  box-sizing: border-box;
+    flex: 1;
+    margin-left: 280px;
+    padding: 30px;
+    min-height: 100vh;
+    background: #f5f7fb;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
-/* ===========================
+/* =====================================================
    HEADER
-=========================== */
+===================================================== */
 
 .allTasksHeader {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .allTasksHeader h1 {
-  margin: 0;
-  font-size: 32px;
-  font-weight: 700;
-  color: #1e293b;
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e293b;
 }
 
 .allTasksHeader p {
-  margin-top: 8px;
-  color: #64748b;
-  font-size: 15px;
+    margin-top: 8px;
+    color: #64748b;
+    font-size: 15px;
 }
 
-/* ===========================
-   SUMMARY BOXES
-=========================== */
+/* =====================================================
+   SUMMARY
+===================================================== */
 
 .taskSummary {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
 .summaryBox {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 22px;
-  box-shadow: 0 8px 18px rgba(0,0,0,.08);
-  transition: .3s;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
 }
 
 .summaryBox:hover {
-  transform: translateY(-4px);
+    transform: translateY(-4px);
 }
 
 .summaryBox span {
-  display: block;
-  color: #64748b;
-  font-size: 15px;
+    display: block;
+    color: #64748b;
+    font-size: 15px;
 }
 
 .summaryBox strong {
-  display: block;
-  margin-top: 10px;
-  font-size: 32px;
-  color: #0f172a;
+    display: block;
+    margin-top: 10px;
+    font-size: 32px;
+    color: #0f172a;
 }
 
-/* ===========================
+/* =====================================================
    FILTERS
-=========================== */
+===================================================== */
 
 .taskFilters {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
 .taskFilters input,
 .taskFilters select {
-  height: 50px;
-  padding: 0 15px;
-  border: 1px solid #dbe2ea;
-  border-radius: 10px;
-  background: #fff;
-  font-size: 15px;
-  outline: none;
-  transition: .3s;
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid #dbe2ea;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+    box-sizing: border-box;
 }
 
 .taskFilters input {
-  flex: 1;
+    flex: 1;
+    min-width: 200px;
 }
 
 .taskFilters input:focus,
 .taskFilters select:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
-/* ===========================
+/* =====================================================
    TASK LIST
-=========================== */
+===================================================== */
 
 .allTasksList {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
-/* ===========================
+/* =====================================================
    TASK CARD
-=========================== */
+===================================================== */
 
 .allTaskCard {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 20px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.08);
-  transition: .3s;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    box-sizing: border-box;
 }
 
 .allTaskCard:hover {
-  transform: translateY(-4px);
+    transform: translateY(-4px);
 }
 
 .allTaskCard input[type="checkbox"] {
-  width: 22px;
-  height: 22px;
-  cursor: pointer;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    flex-shrink: 0;
 }
 
-/* ===========================
+/* =====================================================
    TASK INFO
-=========================== */
+===================================================== */
 
 .allTaskInfo {
-  flex: 1;
+    flex: 1;
+    min-width: 0;
 }
 
 .allTaskInfo h3 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 600;
-  color: #1e293b;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    word-break: break-word;
 }
 
 .completedText {
-  text-decoration: line-through;
-  color: #94a3b8;
+    text-decoration: line-through;
+    color: #94a3b8;
 }
 
 .taskMeta {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 10px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .taskMeta span {
-  background: #f1f5f9;
-  color: #64748b;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 13px;
+    background: #f1f5f9;
+    color: #64748b;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
 }
 
-/* ===========================
+/* =====================================================
    STATUS
-=========================== */
+===================================================== */
 
 .status {
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 .completedStatus {
-  background: #dcfce7;
-  color: #15803d;
+    background: #dcfce7;
+    color: #15803d;
 }
 
 .pendingStatus {
-  background: #fee2e2;
-  color: #dc2626;
+    background: #fee2e2;
+    color: #dc2626;
 }
 
-/* ===========================
-   DELETE BUTTON
-=========================== */
+/* =====================================================
+   TASK ACTIONS
+===================================================== */
+
+.taskActions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.editTaskButton,
+.deleteTaskButton {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editTaskButton {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.editTaskButton:hover {
+    background: #2563eb;
+    color: #fff;
+}
 
 .deleteTaskButton {
-  width: 42px;
-  height: 42px;
-  border: none;
-  border-radius: 10px;
-  background: #fee2e2;
-  color: #dc2626;
-  cursor: pointer;
-  font-size: 18px;
-  transition: .3s;
+    background: #fee2e2;
+    color: #dc2626;
+    font-size: 18px;
 }
 
 .deleteTaskButton:hover {
-  background: #dc2626;
-  color: #fff;
+    background: #dc2626;
+    color: #fff;
 }
 
-/* ===========================
+/* =====================================================
    NO TASKS
-=========================== */
+===================================================== */
 
 .noTasks {
-  background: #fff;
-  border-radius: 16px;
-  padding: 70px 20px;
-  text-align: center;
-  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    background: #fff;
+    border-radius: 16px;
+    padding: 70px 20px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .noTasks h3 {
-  margin-bottom: 10px;
-  color: #1e293b;
-  font-size: 20px;
+    margin-bottom: 10px;
+    color: #1e293b;
+    font-size: 20px;
 }
 
 .noTasks p {
-  color: #64748b;
+    color: #64748b;
 }
 
-/* ===========================
+/* =====================================================
    SCROLLBAR
-=========================== */
+===================================================== */
 
 .allTasksContent::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
 
 .allTasksContent::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 20px;
+    background: #cbd5e1;
+    border-radius: 20px;
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
 
-@media (max-width: 992px) {
+/* =====================================================
+   RESPONSIVE - SIDEBAR LEFT
+===================================================== */
 
-  .allTasksContent {
-    margin-left: 0;
-    padding: 20px;
-  }
 
-  .taskSummary {
-    grid-template-columns: 1fr;
-  }
+/* =====================================================
+   TABLET
+   Sidebar = 250px
+===================================================== */
 
+@media (max-width: 1100px) {
+
+    .allTasksContent {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+        padding: 25px;
+    }
+
+    .taskSummary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .taskFilters {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .taskFilters input,
+    .taskFilters select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .allTaskCard {
+        gap: 14px;
+    }
 }
+
+
+/* =====================================================
+   SMALL TABLET
+   Sidebar = 70px
+===================================================== */
 
 @media (max-width: 768px) {
 
-  .taskFilters {
-    flex-direction: column;
-  }
+    .allTasksContent {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+        padding: 18px;
+    }
 
-  .taskFilters input,
-  .taskFilters select {
-    width: 100%;
-  }
+    .allTasksHeader {
+        margin-bottom: 22px;
+    }
 
-  .allTaskCard {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    .allTasksHeader h1 {
+        font-size: 27px;
+    }
 
-  .status {
-    align-self: flex-start;
-  }
+    .allTasksHeader p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
 
-  .deleteTaskButton {
-    align-self: flex-end;
-  }
+    .taskSummary {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 22px;
+    }
 
+    .summaryBox {
+        padding: 18px;
+    }
+
+    .summaryBox strong {
+        font-size: 28px;
+    }
+
+    .taskFilters {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .taskFilters input,
+    .taskFilters select {
+        width: 100%;
+        min-width: 0;
+        height: 46px;
+    }
+
+    /* =========================================
+       TASK CARD
+    ========================================= */
+
+    .allTaskCard {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+        padding: 16px;
+    }
+
+    .allTaskCard input[type="checkbox"] {
+        grid-column: 1;
+        grid-row: 1;
+        margin-top: 3px;
+    }
+
+    .allTaskInfo {
+        grid-column: 2;
+        grid-row: 1;
+        min-width: 0;
+    }
+
+    .status {
+        grid-column: 2;
+        grid-row: 2;
+        justify-self: start;
+    }
+
+    .taskActions {
+        grid-column: 2;
+        grid-row: 3;
+        justify-content: flex-start;
+    }
+
+    .allTaskInfo h3 {
+        font-size: 16px;
+    }
+
+    .taskMeta {
+        gap: 8px;
+    }
+
+    .taskMeta span {
+        font-size: 12px;
+        padding: 5px 9px;
+    }
 }
+
+
+/* =====================================================
+   MOBILE
+   Sidebar = 70px
+===================================================== */
 
 @media (max-width: 480px) {
 
-  .allTasksHeader h1 {
-    font-size: 26px;
-  }
+    .allTasksContent {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+        padding: 12px;
+    }
 
-  .summaryBox strong {
-    font-size: 28px;
-  }
+    .allTasksHeader {
+        margin-bottom: 18px;
+    }
 
-  .allTaskInfo h3 {
-    font-size: 16px;
-  }
+    .allTasksHeader h1 {
+        font-size: 22px;
+    }
 
+    .allTasksHeader p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    /* =========================================
+       SUMMARY
+    ========================================= */
+
+    .taskSummary {
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .summaryBox {
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    .summaryBox span {
+        font-size: 12px;
+    }
+
+    .summaryBox strong {
+        font-size: 24px;
+        margin-top: 7px;
+    }
+
+    /* =========================================
+       FILTERS
+    ========================================= */
+
+    .taskFilters {
+        gap: 9px;
+        margin-bottom: 18px;
+    }
+
+    .taskFilters input,
+    .taskFilters select {
+        height: 42px;
+        padding: 0 11px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+
+    /* =========================================
+       TASK CARD
+    ========================================= */
+
+    .allTaskCard {
+        padding: 12px;
+        border-radius: 12px;
+        gap: 8px;
+    }
+
+    .allTaskCard input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+    }
+
+    .allTaskInfo h3 {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .taskMeta {
+        gap: 5px;
+        margin-top: 7px;
+    }
+
+    .taskMeta span {
+        font-size: 9px;
+        padding: 4px 7px;
+    }
+
+    .status {
+        font-size: 10px;
+        padding: 6px 9px;
+    }
+
+    /* =========================================
+       ACTION BUTTONS
+    ========================================= */
+
+    .taskActions {
+        gap: 7px;
+    }
+
+    .editTaskButton,
+    .deleteTaskButton {
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+    }
+
+    .deleteTaskButton {
+        font-size: 14px;
+    }
+
+    /* =========================================
+       NO TASKS
+    ========================================= */
+
+    .noTasks {
+        padding: 45px 12px;
+        border-radius: 12px;
+    }
+
+    .noTasks h3 {
+        font-size: 17px;
+    }
+
+    .noTasks p {
+        font-size: 12px;
+    }
 }
 
-.taskActions{
 
-    display:flex;
+/* =====================================================
+   VERY SMALL MOBILE
+   Sidebar = 70px
+===================================================== */
 
-    gap:10px;
+@media (max-width: 360px) {
 
-    align-items:center;
+    .allTasksContent {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+        padding: 9px;
+    }
 
-}
+    .allTasksHeader h1 {
+        font-size: 20px;
+    }
 
-.editTaskButton{
+    .allTasksHeader p {
+        font-size: 10px;
+    }
 
-    width:42px;
+    .summaryBox {
+        padding: 12px;
+    }
 
-    height:42px;
+    .summaryBox span {
+        font-size: 11px;
+    }
 
-    border:none;
+    .summaryBox strong {
+        font-size: 22px;
+    }
 
-    border-radius:10px;
+    .taskFilters input,
+    .taskFilters select {
+        height: 40px;
+        font-size: 11px;
+    }
 
-    background:#dbeafe;
+    .allTaskCard {
+        padding: 10px;
+    }
 
-    color:#2563eb;
+    .allTaskInfo h3 {
+        font-size: 13px;
+    }
 
-    cursor:pointer;
+    .taskMeta span {
+        font-size: 8px;
+        padding: 3px 6px;
+    }
 
-    transition:.3s;
+    .status {
+        font-size: 9px;
+        padding: 5px 8px;
+    }
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
-
-.editTaskButton:hover{
-
-    background:#2563eb;
-
-    color:white;
-
+    .editTaskButton,
+    .deleteTaskButton {
+        width: 32px;
+        height: 32px;
+    }
 }
