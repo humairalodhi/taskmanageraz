@@ -3,9 +3,12 @@ import { Navigate } from "react-router-dom";
 import { supabase } from "../../supabase";
 
 const ProtectedRoute = ({ children }) => {
-  const [session, setSession] = useState(undefined);
+  const [session, setSession] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    let mounted = true;
+
     const checkSession = async () => {
       const {
         data: { session },
@@ -13,7 +16,10 @@ const ProtectedRoute = ({ children }) => {
 
       console.log("PROTECTED ROUTE SESSION:", session);
 
-      setSession(session);
+      if (mounted) {
+        setSession(session);
+        setLoading(false);
+      }
     };
 
     checkSession();
@@ -24,25 +30,25 @@ const ProtectedRoute = ({ children }) => {
       console.log("AUTH EVENT:", event);
       console.log("AUTH SESSION:", session);
 
-      setSession(session);
+      if (mounted && session) {
+        setSession(session);
+      }
     });
 
     return () => {
+      mounted = false;
       subscription.unsubscribe();
     };
   }, []);
 
-  // Session check hone tak
-  if (session === undefined) {
+  if (loading) {
     return <div>Checking login...</div>;
   }
 
-  // Agar login nahi hai
   if (!session) {
     return <Navigate to="/login" replace />;
   }
 
-  // Agar login hai
   return children;
 };
 
