@@ -5,7 +5,7 @@ import Header from "../../Component/Header/Header";
 import ProgressBar from "../../Component/ProgressBar/ProgressBar";
 import TaskInput from "../../Component/Taskinput/Taskinput";
 import TaskList from "../../Component/Tasklist/Tasklist";
-import PreviousMonth from "../../Component/PreviousMonth/PreviousMonth";
+import PreviousMonth from "../../Component/Previousmonth/Previousmonth";
 
 import { supabase } from "../../supabase";
 import getCurrentMonth from "../../utils/GetcurrentMonth/Getcurrentmonth";
