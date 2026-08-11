@@ -18,6 +18,7 @@ import Stats from "./Pages/Stats/Stats";
 import Setting from "./Pages/Settings/Setting";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
+import ProtectedRoute from "./Component/ProtectedRoute/Protected";
 
 function App() {
   return (
@@ -76,9 +77,13 @@ function App() {
 
           {/* Dashboard */}
           <Route
-            path="/dashboard"
-            element={<Dashboard />}
-          />
+  path="/dashboard"
+  element={
+    <ProtectedRoute>
+      <Dashboard />
+    </ProtectedRoute>
+  }
+/>
 
           {/* All Tasks */}
           <Route
