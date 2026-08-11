@@ -1,18 +1,26 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "../../supabase";
+
 import toast from "react-hot-toast";
 
 import "./Login.css";
 
 const Login = () => {
+
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const [loading, setLoading] = useState(false);
 
+  // =========================
+  // LOGIN
+  // =========================
+
   const handleLogin = async (e) => {
+
     e.preventDefault();
 
     if (!email || !password) {
@@ -21,6 +29,7 @@ const Login = () => {
     }
 
     try {
+
       setLoading(true);
 
       const { data, error } =
@@ -30,81 +39,151 @@ const Login = () => {
         });
 
       if (error) {
-        console.error("Login error:", error);
-        toast.error(error.message);
+
+        console.error(
+          "Login error:",
+          error
+        );
+
+        toast.error(
+          error.message
+        );
+
         return;
       }
 
       if (data.user) {
-        toast.success("Login successful 🎉");
+
+        toast.success(
+          "Login successful 🎉"
+        );
+
+        // IMPORTANT:
+        // Login ke baad Dashboard par jao
         navigate("/dashboard");
+
       }
+
     } catch (error) {
-      console.error("Login error:", error);
-      toast.error("Something went wrong");
+
+      console.error(
+        "Login error:",
+        error
+      );
+
+      toast.error(
+        "Something went wrong"
+      );
+
     } finally {
+
       setLoading(false);
+
     }
+
   };
 
   return (
+
     <div className="loginPage">
+
       <div className="loginCard">
 
+        {/* HEADER */}
+
         <div className="loginHeader">
-          <h1>Welcome Back</h1>
-          <p>Login to your Task Manager</p>
+
+          <h1>
+            Welcome Back
+          </h1>
+
+          <p>
+            Login to your Task Manager
+          </p>
+
         </div>
+
+        {/* FORM */}
 
         <form
           onSubmit={handleLogin}
           className="loginForm"
         >
 
+          {/* EMAIL */}
+
           <div className="formGroup">
-            <label>Email</label>
+
+            <label>
+              Email
+            </label>
 
             <input
               type="email"
               placeholder="Enter your email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) =>
+                setEmail(e.target.value)
+              }
               disabled={loading}
             />
+
           </div>
 
+          {/* PASSWORD */}
+
           <div className="formGroup">
-            <label>Password</label>
+
+            <label>
+              Password
+            </label>
 
             <input
               type="password"
               placeholder="Enter your password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) =>
+                setPassword(e.target.value)
+              }
               disabled={loading}
             />
+
           </div>
+
+          {/* LOGIN BUTTON */}
 
           <button
             type="submit"
             className="loginButton"
             disabled={loading}
           >
-            {loading ? "Logging in..." : "Login"}
+
+            {loading
+              ? "Logging in..."
+              : "Login"}
+
           </button>
 
         </form>
 
+        {/* SIGN UP */}
+
         <div className="signupLink">
-          <span>Don't have an account?</span>
+
+          <span>
+            Don't have an account?
+          </span>
 
           <Link to="/signup">
             Sign Up
           </Link>
+
         </div>
 
       </div>
+
     </div>
+
   );
 };
 

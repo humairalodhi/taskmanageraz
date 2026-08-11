@@ -24,6 +24,7 @@ function App() {
   return (
     <ThemeProvider>
 
+      {/* Toast Notifications */}
       <Toaster
         position="top-right"
         reverseOrder={false}
@@ -54,22 +55,28 @@ function App() {
       />
 
       <BrowserRouter>
-       <Route
-  path="/"
-  element={<Navigate to="/login" replace />}
-/>
+        <Routes>
 
-<Route
-  path="/login"
-  element={<Login />}
-/>
+          {/* Login - website open hote hi */}
+          <Route
+            path="/"
+            element={<Login />}
+          />
 
-<Route
-  path="/signup"
-  element={<Signup />}
-/>
+          {/* Login */}
+          <Route
+            path="/login"
+            element={<Login />}
+          />
 
-<Route
+          {/* Signup */}
+          <Route
+            path="/signup"
+            element={<Signup />}
+          />
+
+          {/* Dashboard */}
+          <Route
   path="/dashboard"
   element={
     <ProtectedRoute>
@@ -78,46 +85,37 @@ function App() {
   }
 />
 
-<Route
-  path="/all-tasks"
-  element={
-    <ProtectedRoute>
-      <AllTask />
-    </ProtectedRoute>
-  }
-/>
+          {/* All Tasks */}
+          <Route
+            path="/all-tasks"
+            element={<AllTask />}
+          />
 
-<Route
-  path="/calendar"
-  element={
-    <ProtectedRoute>
-      <Calender />
-    </ProtectedRoute>
-  }
-/>
+          {/* Calendar */}
+          <Route
+            path="/calendar"
+            element={<Calender />}
+          />
 
-<Route
-  path="/stats"
-  element={
-    <ProtectedRoute>
-      <Stats />
-    </ProtectedRoute>
-  }
-/>
+          {/* Statistics */}
+          <Route
+            path="/stats"
+            element={<Stats />}
+          />
 
-<Route
-  path="/settings"
-  element={
-    <ProtectedRoute>
-      <Setting />
-    </ProtectedRoute>
-  }
-/>
+          {/* Settings */}
+          <Route
+            path="/settings"
+            element={<Setting />}
+          />
 
-<Route
-  path="*"
-  element={<Navigate to="/login" replace />}
-/>
+          {/* Unknown URL → Login */}
+          <Route
+            path="*"
+            element={<Navigate to="/" replace />}
+          />
+
+        </Routes>
       </BrowserRouter>
 
     </ThemeProvider>
