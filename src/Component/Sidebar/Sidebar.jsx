@@ -23,7 +23,7 @@ const Sidebar = () => {
         {/* Dashboard */}
         <li>
           <NavLink
-            to="/"
+            to="/dashbord"
             className={({ isActive }) =>
               isActive ? "activeLink" : ""
             }
