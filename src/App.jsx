@@ -61,13 +61,13 @@ function App() {
           <Route
             path="/"
             element={<Login />}
-          /> 
+          />
 
           {/* Login */}
-          {/* <Route
+          <Route
             path="/login"
             element={<Login />}
-          /> */}
+          />
 
           {/* Signup */}
           <Route

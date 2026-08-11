@@ -60,7 +60,7 @@ const Login = () => {
 
         // IMPORTANT:
         // Login ke baad Dashboard par jao
-        navigate("/dashboard");
+        navigate("/");
 
       }
 
