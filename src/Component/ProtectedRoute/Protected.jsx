@@ -14,7 +14,7 @@ const ProtectedRoute = ({ children }) => {
         data: { session },
       } = await supabase.auth.getSession();
 
-      console.log("PROTECTED ROUTE SESSION:", session);
+      console.log("PROTECTED SESSION:", session);
 
       if (mounted) {
         setSession(session);
@@ -26,14 +26,16 @@ const ProtectedRoute = ({ children }) => {
 
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange((event, session) => {
-      console.log("AUTH EVENT:", event);
-      console.log("AUTH SESSION:", session);
+    } = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        console.log("AUTH SESSION:", session);
 
-      if (mounted && session) {
-        setSession(session);
+        if (mounted) {
+          setSession(session);
+          setLoading(false);
+        }
       }
-    });
+    );
 
     return () => {
       mounted = false;

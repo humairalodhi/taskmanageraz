@@ -54,83 +54,70 @@ function App() {
       />
 
       <BrowserRouter>
-        <Routes>
+       <Route
+  path="/"
+  element={<Navigate to="/login" replace />}
+/>
 
-          {/* Website open → Login */}
-          <Route
-            path="/"
-            element={<Navigate to="/login" replace />}
-          />
+<Route
+  path="/login"
+  element={<Login />}
+/>
 
-          {/* Login */}
-          <Route
-            path="/login"
-            element={<Login />}
-          />
+<Route
+  path="/signup"
+  element={<Signup />}
+/>
 
-          {/* Signup */}
-          <Route
-            path="/signup"
-            element={<Signup />}
-          />
+<Route
+  path="/dashboard"
+  element={
+    <ProtectedRoute>
+      <Dashboard />
+    </ProtectedRoute>
+  }
+/>
 
-          {/* Dashboard */}
-          <Route
-            path="/dashboard"
-            element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            }
-          />
+<Route
+  path="/all-tasks"
+  element={
+    <ProtectedRoute>
+      <AllTask />
+    </ProtectedRoute>
+  }
+/>
 
-          {/* All Tasks */}
-          <Route
-            path="/all-tasks"
-            element={
-              <ProtectedRoute>
-                <AllTask />
-              </ProtectedRoute>
-            }
-          />
+<Route
+  path="/calendar"
+  element={
+    <ProtectedRoute>
+      <Calender />
+    </ProtectedRoute>
+  }
+/>
 
-          {/* Calendar */}
-          <Route
-            path="/calendar"
-            element={
-              <ProtectedRoute>
-                <Calender />
-              </ProtectedRoute>
-            }
-          />
+<Route
+  path="/stats"
+  element={
+    <ProtectedRoute>
+      <Stats />
+    </ProtectedRoute>
+  }
+/>
 
-          {/* Statistics */}
-          <Route
-            path="/stats"
-            element={
-              <ProtectedRoute>
-                <Stats />
-              </ProtectedRoute>
-            }
-          />
+<Route
+  path="/settings"
+  element={
+    <ProtectedRoute>
+      <Setting />
+    </ProtectedRoute>
+  }
+/>
 
-          {/* Settings */}
-          <Route
-            path="/settings"
-            element={
-              <ProtectedRoute>
-                <Setting />
-              </ProtectedRoute>
-            }
-          />
-
-          {/* Unknown URL → Login */}
-          <Route
-            path="*"
-            element={<Navigate to="/login" replace />}
-          />
-
-        </Routes>
+<Route
+  path="*"
+  element={<Navigate to="/login" replace />}
+/>
       </BrowserRouter>
 
     </ThemeProvider>

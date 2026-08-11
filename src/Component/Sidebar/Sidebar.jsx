@@ -22,16 +22,16 @@ const Sidebar = () => {
 
         {/* Dashboard */}
         <li>
-          <NavLink
-            to="/dashbord"
-            className={({ isActive }) =>
-              isActive ? "activeLink" : ""
-            }
-          >
-            <FaHome className="sidebarIcon" />
-            <span>Dashboard</span>
-          </NavLink>
-        </li>
+  <NavLink
+    to="/dashboard"
+    className={({ isActive }) =>
+      isActive ? "activeLink" : ""
+    }
+  >
+    <FaHome className="sidebarIcon" />
+    <span>Dashboard</span>
+  </NavLink>
+</li>
 
         {/* All Tasks */}
         <li>
