@@ -1,6 +1,12 @@
 import "./App.css";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+
 import { Toaster } from "react-hot-toast";
 
 import { ThemeProvider } from "./Context/ThemeContext";
@@ -11,7 +17,7 @@ import AllTask from "./Pages/AllTask/AllTask";
 import Stats from "./Pages/Stats/Stats";
 import Setting from "./Pages/Settings/Setting";
 import Login from "./Pages/Login/Login";
-import Signup from './Pages/Signup/Signup'
+import Signup from "./Pages/Signup/Signup";
 
 function App() {
   return (
@@ -30,12 +36,14 @@ function App() {
             borderRadius: "12px",
             padding: "14px 18px",
           },
+
           success: {
             iconTheme: {
               primary: "#22c55e",
               secondary: "#ffffff",
             },
           },
+
           error: {
             iconTheme: {
               primary: "#ef4444",
@@ -48,9 +56,27 @@ function App() {
       <BrowserRouter>
         <Routes>
 
-          {/* Dashboard */}
+          {/* Login - website open hote hi */}
           <Route
             path="/"
+            element={<Login />}
+          />
+
+          {/* Login */}
+          <Route
+            path="/login"
+            element={<Login />}
+          />
+
+          {/* Signup */}
+          <Route
+            path="/signup"
+            element={<Signup />}
+          />
+
+          {/* Dashboard */}
+          <Route
+            path="/dashboard"
             element={<Dashboard />}
           />
 
@@ -78,9 +104,11 @@ function App() {
             element={<Setting />}
           />
 
-          <Route path="/login" element={<Login/>} />
-
-          <Route path="/signup" element={<Signup />} />
+          {/* Unknown URL → Login */}
+          <Route
+            path="*"
+            element={<Navigate to="/" replace />}
+          />
 
         </Routes>
       </BrowserRouter>
