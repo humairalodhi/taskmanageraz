@@ -58,10 +58,10 @@ function App() {
         <Routes>
 
           {/* Login - website open hote hi */}
-          <Route
+          {/* <Route
             path="/"
             element={<Login />}
-          />
+          /> */}
 
           {/* Login */}
           <Route
