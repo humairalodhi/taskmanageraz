@@ -16,19 +16,23 @@ import Calender from "./Pages/Calender/Calender";
 import AllTask from "./Pages/AllTask/AllTask";
 import Stats from "./Pages/Stats/Stats";
 import Setting from "./Pages/Settings/Setting";
+
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
+
 import ProtectedRoute from "./Component/ProtectedRoute/Protected";
 
 function App() {
   return (
     <ThemeProvider>
 
+      {/* Toast */}
       <Toaster
         position="top-right"
         reverseOrder={false}
         toastOptions={{
           duration: 2500,
+
           style: {
             background: "#1e293b",
             color: "#ffffff",
@@ -56,25 +60,42 @@ function App() {
       <BrowserRouter>
         <Routes>
 
-          {/* Website open → Login */}
+          {/* ========================= */}
+          {/* Website Open */}
+          {/* ========================= */}
+
           <Route
             path="/"
-            element={<Navigate to="/login" replace />}
+            element={
+              <Navigate
+                to="/login"
+                replace
+              />
+            }
           />
 
+          {/* ========================= */}
           {/* Login */}
+          {/* ========================= */}
+
           <Route
             path="/login"
             element={<Login />}
           />
 
+          {/* ========================= */}
           {/* Signup */}
+          {/* ========================= */}
+
           <Route
             path="/signup"
             element={<Signup />}
           />
 
+          {/* ========================= */}
           {/* Dashboard */}
+          {/* ========================= */}
+
           <Route
             path="/dashboard"
             element={
@@ -84,7 +105,7 @@ function App() {
             }
           />
 
-           <Route
+          <Route
             path="/dash"
             element={
               <ProtectedRoute>
@@ -93,7 +114,10 @@ function App() {
             }
           />
 
+          {/* ========================= */}
           {/* All Tasks */}
+          {/* ========================= */}
+
           <Route
             path="/all-tasks"
             element={
@@ -103,7 +127,10 @@ function App() {
             }
           />
 
+          {/* ========================= */}
           {/* Calendar */}
+          {/* ========================= */}
+
           <Route
             path="/calendar"
             element={
@@ -113,7 +140,10 @@ function App() {
             }
           />
 
+          {/* ========================= */}
           {/* Statistics */}
+          {/* ========================= */}
+
           <Route
             path="/stats"
             element={
@@ -123,7 +153,10 @@ function App() {
             }
           />
 
+          {/* ========================= */}
           {/* Settings */}
+          {/* ========================= */}
+
           <Route
             path="/settings"
             element={
@@ -133,10 +166,18 @@ function App() {
             }
           />
 
-          {/* Unknown URL → Login */}
+          {/* ========================= */}
+          {/* Unknown URL */}
+          {/* ========================= */}
+
           <Route
             path="*"
-            element={<Navigate to="/login" replace />}
+            element={
+              <Navigate
+                to="/login"
+                replace
+              />
+            }
           />
 
         </Routes>

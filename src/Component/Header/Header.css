@@ -1,88 +1,446 @@
+/* =========================
+   HEADER
+========================= */
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   margin-bottom: 30px;
+
   width: 100%;
+
   gap: 15px;
 }
 
+
+/* =========================
+   HEADER TITLE
+========================= */
+
 .header h2 {
   margin: 0;
+
   font-size: 24px;
+
   font-weight: 700;
 }
+
+
+/* =========================
+   PROFILE WRAPPER
+========================= */
+
+.profileWrapper {
+  position: relative;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   PROFILE BUTTON
+========================= */
 
 .profile {
   width: 45px;
   height: 45px;
+
   min-width: 45px;
+
+  padding: 0;
+
+  border: none;
+
   background: #5b5bd6;
+
   color: white;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   border-radius: 50%;
+
   font-weight: bold;
+
   font-size: 15px;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition: 0.2s ease;
 }
+
+.profile:hover {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   GOOGLE PROFILE IMAGE
+========================= */
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  display: block;
+}
+
+
+/* =========================
+   PROFILE DROPDOWN
+========================= */
+
+.profileMenu {
+  position: absolute;
+
+  top: calc(100% + 10px);
+
+  right: 0;
+
+  width: 280px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 14px;
+
+  padding: 10px;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.12);
+
+  z-index: 9999;
+
+  animation: profileMenuOpen 0.15s ease;
+}
+
+
+/* =========================
+   DROPDOWN ANIMATION
+========================= */
+
+@keyframes profileMenuOpen {
+  from {
+    opacity: 0;
+
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   PROFILE INFORMATION
+========================= */
+
+.profileInfo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 10px;
+}
+
+
+/* =========================
+   LARGE PROFILE
+========================= */
+
+.profileLarge {
+  width: 48px;
+  height: 48px;
+
+  min-width: 48px;
+
+  border-radius: 50%;
+
+  background: #5b5bd6;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   LARGE PROFILE IMAGE
+========================= */
+
+.profileLargeImage {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  display: block;
+}
+
+
+/* =========================
+   PROFILE DETAILS
+========================= */
+
+.profileDetails {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.profileDetails strong {
+  color: #111827;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+.profileDetails span {
+  color: #6b7280;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================
+   DROPDOWN DIVIDER
+========================= */
+
+.profileDivider {
+  width: 100%;
+
+  height: 1px;
+
+  background: #e5e7eb;
+
+  margin: 5px 0 8px;
+}
+
+
+/* =========================
+   DROPDOWN BUTTON
+========================= */
+
+.profileMenuItem {
+  width: 100%;
+
+  border: none;
+
+  background: transparent;
+
+  padding: 11px 12px;
+
+  border-radius: 8px;
+
+  display: flex;
+
+  align-items: center;
+
+  text-align: left;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+/* =========================
+   DISABLED
+========================= */
+
+.profileMenuItem:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================
+   LOGOUT
+========================= */
+
+.logoutItem {
+  color: #374151;
+}
+
+
+.logoutItem:hover:not(:disabled) {
+  background: #f3f4f6;
+}
+
+
+/* =========================
+   DELETE ACCOUNT
+========================= */
+
+.deleteItem {
+  color: #dc2626;
+}
+
+
+.deleteItem:hover:not(:disabled) {
+  background: #fef2f2;
+}
+
 
 /* =========================
    TABLET
 ========================= */
 
 @media (max-width: 768px) {
+
   .header {
     margin-bottom: 25px;
+
     gap: 10px;
   }
+
 
   .header h2 {
     font-size: 20px;
   }
 
+
   .profile {
     width: 42px;
     height: 42px;
+
     min-width: 42px;
+
     font-size: 14px;
   }
+
+
+  .profileMenu {
+    width: 270px;
+  }
 }
+
 
 /* =========================
    MOBILE
 ========================= */
 
 @media (max-width: 480px) {
+
   .header {
     margin-bottom: 20px;
   }
+
 
   .header h2 {
     font-size: 17px;
   }
 
+
   .profile {
     width: 38px;
     height: 38px;
+
     min-width: 38px;
+
     font-size: 13px;
   }
+
+
+  .profileMenu {
+    width: 250px;
+
+    right: 0;
+  }
+
+
+  .profileLarge {
+    width: 44px;
+    height: 44px;
+
+    min-width: 44px;
+  }
+
+
+  .profileDetails strong {
+    font-size: 14px;
+  }
+
+
+  .profileDetails span {
+    font-size: 12px;
+  }
 }
+
 
 /* =========================
    VERY SMALL MOBILE
 ========================= */
 
 @media (max-width: 360px) {
+
   .header h2 {
     font-size: 15px;
   }
 
+
   .profile {
     width: 35px;
     height: 35px;
+
     min-width: 35px;
+
     font-size: 12px;
+  }
+
+
+  .profileMenu {
+    width: 235px;
   }
 }
